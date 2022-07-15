@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/thongtinhsach"
+        android:title="Thông tin sách"
+        app:showAsAction="never"
+        >
+        <menu>
+            <item
+                android:id="@+id/menuSach"
+                android:title="Sách"
+                />
+            <item
+                android:id="@+id/menuSachmuon"
+                android:title="Sách mượn"
+                />
+            <item
+                android:id="@+id/menuPhieumuon"
+                android:title="Phiếu mượn"
+                />
+            <item
+                android:id="@+id/menuQuanLyThanhVien"
+                android:title="Quản lý thành viên"
+                />
+        </menu>
+    </item>
+<!--    -->
+    <item
+        android:id="@+id/taikhoan"
+        android:title="Tài khoản"
+        app:showAsAction="never">
+        <menu>
+            <item android:id="@+id/menucapnhattaikhoan"
+                android:title="Cập nhật tài khoản"
+                android:icon="@color/black"/>
+            <item android:id="@+id/menuDoimatkhau"
+                android:title="Đổi mật khẩu"
+                android:icon="@color/black"/>
+        </menu>
+    </item>
+
+</menu>

@@ -8,14 +8,19 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-import com.example.nhatnghia_app.Fragment.FragmentSach;
-import com.example.nhatnghia_app.Fragment.FragmentTest;
+import com.example.nhatnghia_app.Fragment.Fm_CapNhapTaiKhoan;
+import com.example.nhatnghia_app.Fragment.Fm_DiaChi;
+import com.example.nhatnghia_app.Fragment.Fm_DoiMatKhau;
+import com.example.nhatnghia_app.Fragment.Fm_GioiThieu;
+import com.example.nhatnghia_app.Fragment.Fm_PhieuMuon;
+import com.example.nhatnghia_app.Fragment.Fm_QuanLySach;
+import com.example.nhatnghia_app.Fragment.Fm_QuanLyThanhVien;
+import com.example.nhatnghia_app.Fragment.Fm_TrangChinh;
 import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity{
@@ -37,44 +42,53 @@ public class MainActivity extends AppCompatActivity{
         actionBar.setHomeAsUpIndicator(R.drawable.ic_baseline_menu_open_24);
         actionBar.setDisplayHomeAsUpEnabled(true);
 
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        fragmentManager.beginTransaction().replace(R.id.frameLayout,new Fm_TrangChinh()).commit();
+
+
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 Fragment fragment;
-                Class fragmentClass = null;
+                Class fragmentClass = Fm_TrangChinh.class;
                 switch (item.getItemId()){
-                    case R.id.menuSach: {
-                        fragmentClass = FragmentSach.class;
-                        Toast.makeText(MainActivity.this, "Sách", Toast.LENGTH_SHORT).show();
+                    case R.id.mn1: {
+                        fragmentClass = Fm_TrangChinh.class;
                         break;
                     }
-//                    case R.id.menuSachmuon: {
-//                        fragmentClass = FragmentTest.class;
-//                        Toast.makeText(MainActivity.this, "Quan ly loai sach", Toast.LENGTH_SHORT).show();
-//                        break;
-//                    }
-//                    case R.id.menuPhieumuon: {
-//                        fragmentClass = FragmentTest.class;
-//                        Toast.makeText(MainActivity.this, "Quan ly sach", Toast.LENGTH_SHORT).show();
-//                        break;
-//                    }
-//                    case R.id.menuQuanLyThanhVien: {
-//                        fragmentClass = FragmentTest.class;
-//                        Toast.makeText(MainActivity.this, "Quan ly thanh vien", Toast.LENGTH_SHORT).show();
-//                        break;
-//                    }
-//                    case R.id.menucapnhattaikhoan: {
-//                        fragmentClass = FragmentTest.class;
-//                        Toast.makeText(MainActivity.this, "top 10 sach muon nhieu nhat", Toast.LENGTH_SHORT).show();
-//
-//                        break;
-//                    }
-//                    case R.id.menuDoimatkhau: {
-//                        fragmentClass = FragmentTest.class;
-//                        Toast.makeText(MainActivity.this, "Doanh thu", Toast.LENGTH_SHORT).show();
-//
-//                        break;
-//                    }
+                    case R.id.mn2: {
+                        fragmentClass = Fm_PhieuMuon.class;
+                        break;
+                    }
+                    case R.id.mn3: {
+                        fragmentClass = Fm_QuanLySach.class;
+                        break;
+                    }
+                    case R.id.mn4: {
+                        fragmentClass = Fm_QuanLyThanhVien.class;
+                        break;
+                    }
+                    case R.id.mn5: {
+                        fragmentClass = Fm_CapNhapTaiKhoan.class;
+                        break;
+                    }
+                    case R.id.mn6: {
+                        fragmentClass = Fm_DoiMatKhau.class;
+                        break;
+                    }
+                    case R.id.mn7: {
+                        System.exit(0);
+                        break;
+                    }
+                    case R.id.mn8: {
+                        fragmentClass = Fm_GioiThieu.class;
+                        break;
+                    }
+                    case R.id.mn9: {
+                        fragmentClass = Fm_DiaChi.class;
+                        break;
+                    }
+
                     default:
 //                        fragmentClass = FragmentTest.class;
 //                        Toast.makeText(MainActivity.this,"Exit",Toast.LENGTH_SHORT).show();

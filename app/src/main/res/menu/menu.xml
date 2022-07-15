@@ -9,23 +9,20 @@
         >
         <menu>
             <item
-                android:id="@+id/menuSach"
+                android:id="@+id/mn1"
                 android:title="Trang Chính"
                 />
+
             <item
-                android:id="@+id/menuSachmuon"
-                android:title="Sách cho mượn"
-                />
-            <item
-                android:id="@+id/menuPhieumuon"
+                android:id="@+id/mn2"
                 android:title="Phiếu mượn"
                 />
             <item
-                android:id="@+id/menuQuanLySach"
+                android:id="@+id/mn3"
                 android:title="Quản lý Sach"
                 />
             <item
-                android:id="@+id/menuQuanLyThanhVien"
+                android:id="@+id/mn4"
                 android:title="Quản lý thành viên"
                 />
         </menu>
@@ -36,14 +33,14 @@
         android:title="Tài khoản"
         app:showAsAction="never">
         <menu>
-            <item android:id="@+id/menucapnhattaikhoan"
+            <item android:id="@+id/mn5"
                 android:title="Cập nhật tài khoản"
                 android:icon="@color/black"/>
-            <item android:id="@+id/menuDoimatkhau"
+            <item android:id="@+id/mn6"
                 android:title="Đổi mật khẩu"
                 android:icon="@color/black"/>
-            <item android:id="@+id/menuDangXuat"
-                android:title="DangXuat"
+            <item android:id="@+id/mn7"
+                android:title="Dang Xuat"
                 android:icon="@color/black"/>
         </menu>
     </item>
@@ -52,10 +49,10 @@
         android:title="Gioi Thieu"
         app:showAsAction="never">
         <menu>
-            <item android:id="@+id/menuGioiThieu"
+            <item android:id="@+id/mn8"
                 android:title="Giới Thiệu"
                 android:icon="@color/black"/>
-            <item android:id="@+id/menuToado"
+            <item android:id="@+id/mn9"
                 android:title="DiaChi"
                 android:icon="@color/black"/>
 

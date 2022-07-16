@@ -1,4 +1,4 @@
-package com.example.nhatnghia_app;
+package com.example.nhatnghia_app.Fragment;
 
 import android.Manifest;
 import android.app.ProgressDialog;
@@ -22,6 +22,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.example.nhatnghia_app.R;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.storage.FileDownloadTask;
@@ -35,7 +36,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
-public class Fm_ImageControl extends Fragment {
+public class Fm_bgroup_ImageControl extends Fragment {
     ImageView imageView;
     Uri imageUri;
     StorageReference storageReference;
@@ -97,61 +98,61 @@ public class Fm_ImageControl extends Fragment {
         progressDialog.show();
 
 
-//        SimpleDateFormat formatter = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss", Locale.JAPAN);
-//        Date now = new Date();
-//        String fileName = formatter.format(now);
-//        storageReference = FirebaseStorage.getInstance().getReference("images/"+fileName);
-//
-//
-//        storageReference.putFile(imageUri)
-//                .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-//                    @Override
-//                    public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-//
-//                        v.setImageURI(null);
-//                        Toast.makeText(getActivity(),"Successfully Uploaded",Toast.LENGTH_SHORT).show();
-//                        if (progressDialog.isShowing())
-//                            progressDialog.dismiss();
-//
-//                    }
-//                }).addOnFailureListener(new OnFailureListener() {
-//            @Override
-//            public void onFailure(@NonNull Exception e) {
-//
-//
-//                if (progressDialog.isShowing())
-//                    progressDialog.dismiss();
-//                Toast.makeText(getActivity(),"Failed to Upload",Toast.LENGTH_SHORT).show();
-//
-//
-//            }
-//        });
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss", Locale.JAPAN);
+        Date now = new Date();
+        String fileName = formatter.format(now).replace("_","");
+        storageReference = FirebaseStorage.getInstance().getReference("images/"+fileName);
+
+
+        storageReference.putFile(imageUri)
+                .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                    @Override
+                    public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+
+                        v.setImageURI(null);
+                        Toast.makeText(getActivity(),"Successfully Uploaded",Toast.LENGTH_SHORT).show();
+                        if (progressDialog.isShowing())
+                            progressDialog.dismiss();
+
+                    }
+                }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+
+
+                if (progressDialog.isShowing())
+                    progressDialog.dismiss();
+                Toast.makeText(getActivity(),"Failed to Upload",Toast.LENGTH_SHORT).show();
+
+
+            }
+        });
 
 
 //      storageReference  = FirebaseStorage.getInstance().getReference("images/"+"2022_07_16_07_14_31"+".jpeg");
 //      storageReference = FirebaseStorage.getInstance().getReferenceFromUrl("gs://nhatnghiaappteamwork.appspot.com/images/2022_07_16_07_14_31");
-        storageReference = FirebaseStorage.getInstance().getReference().child("images/2022_07_16_07_14_31");
-
-        try {
-            File localfile = File.createTempFile("tempfile",".jpeg");
-            storageReference.getFile(localfile)
-                    .addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {
-                        @Override
-                        public void onSuccess(FileDownloadTask.TaskSnapshot taskSnapshot) {
-                            if(progressDialog.isShowing())
-                                progressDialog.dismiss();
-                            Bitmap bitmap = BitmapFactory.decodeFile(localfile.getAbsolutePath());
-                            imageView.setImageBitmap(bitmap);
-                        }
-                    }).addOnFailureListener(new OnFailureListener() {
-                @Override
-                public void onFailure(@NonNull Exception e) {
-                    Toast.makeText(getActivity(), "Failed to retrieve", Toast.LENGTH_SHORT).show();
-                }
-            });
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+//        storageReference = FirebaseStorage.getInstance().getReference().child("images/2022_07_16_07_14_31");
+//
+//        try {
+//            File localfile = File.createTempFile("tempfile",".jpeg");
+//            storageReference.getFile(localfile)
+//                    .addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {
+//                        @Override
+//                        public void onSuccess(FileDownloadTask.TaskSnapshot taskSnapshot) {
+//                            if(progressDialog.isShowing())
+//                                progressDialog.dismiss();
+//                            Bitmap bitmap = BitmapFactory.decodeFile(localfile.getAbsolutePath());
+//                            imageView.setImageBitmap(bitmap);
+//                        }
+//                    }).addOnFailureListener(new OnFailureListener() {
+//                @Override
+//                public void onFailure(@NonNull Exception e) {
+//                    Toast.makeText(getActivity(), "Failed to retrieve", Toast.LENGTH_SHORT).show();
+//                }
+//            });
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
 
 
     }

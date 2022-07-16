@@ -7,13 +7,16 @@ public class Sach {
     private String ID;
     private String imgsach;
 
+    public Sach() {
+    }
 
-    public Sach(String tenSach, String tenTacGia, String theLoai, String ID, String imgsach) {
-        TenSach = tenSach;
-        this.tenTacGia = tenTacGia;
-        TheLoai = theLoai;
+    public Sach(String ID, String imgsach, String tenSach, String tenTacGia, String theLoai) {
         this.ID = ID;
         this.imgsach = imgsach;
+        this.TenSach = tenSach;
+        this.tenTacGia = tenTacGia;
+        this.TheLoai = theLoai;
+
     }
 
     public String getTenSach() {

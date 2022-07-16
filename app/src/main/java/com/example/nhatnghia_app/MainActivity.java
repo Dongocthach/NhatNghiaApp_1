@@ -11,12 +11,12 @@ import androidx.fragment.app.FragmentManager;
 
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 import com.example.nhatnghia_app.Fragment.Fm_CapNhapTaiKhoan;
 import com.example.nhatnghia_app.Fragment.Fm_DiaChi;
 import com.example.nhatnghia_app.Fragment.Fm_DoiMatKhau;
 import com.example.nhatnghia_app.Fragment.Fm_GioiThieu;
+import com.example.nhatnghia_app.Fragment.Fm_bgroup_ImageControl;
 import com.example.nhatnghia_app.Fragment.Fm_PhieuMuon;
 import com.example.nhatnghia_app.Fragment.Fm_QuanLySach;
 import com.example.nhatnghia_app.Fragment.Fm_QuanLyThanhVien;
@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity{
         actionBar.setDisplayHomeAsUpEnabled(true);
 
         FragmentManager fragmentManager = getSupportFragmentManager();
-        fragmentManager.beginTransaction().replace(R.id.frameLayout,new Fm_ImageControl()).commit();
+        fragmentManager.beginTransaction().replace(R.id.frameLayout,new Fm_bgroup_ImageControl()).commit();
 
 
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {

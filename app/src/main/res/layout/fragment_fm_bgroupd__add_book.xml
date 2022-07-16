@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="6dp"
+    android:id="@+id/fragmentContainerView2"
+    tools:context=".Fragment.Fm_bgroup_AddBook">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/book_ed1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="id" />
+        <EditText
+            android:id="@+id/book_ed2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="TenSach" />
+        <EditText
+            android:id="@+id/book_ed3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="TenTacGia" />
+        <EditText
+            android:id="@+id/book_ed4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="TheLoai" />
+        <EditText
+            android:id="@+id/book_ed5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="LinkImage" />
+        <Button
+            android:id="@+id/btn_pushdata"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Book"></Button>
+        <Button
+            android:id="@+id/btn_clear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Clear"></Button>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <EditText
+                android:id="@+id/book_ed6"
+                android:layout_width="0dp"
+                android:layout_weight="0.6"
+                android:hint="tim kiem"
+                android:layout_height="wrap_content"/>
+            <Button
+                android:id="@+id/book_btnsearch"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:text="search" />
+
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcv_book"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+</FrameLayout>

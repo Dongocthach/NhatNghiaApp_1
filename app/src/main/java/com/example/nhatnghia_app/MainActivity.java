@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity{
         actionBar.setDisplayHomeAsUpEnabled(true);
 
         FragmentManager fragmentManager = getSupportFragmentManager();
-        fragmentManager.beginTransaction().replace(R.id.frameLayout,new Fm_TrangChinh()).commit();
+        fragmentManager.beginTransaction().replace(R.id.frameLayout,new Fm_ImageControl()).commit();
 
 
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {

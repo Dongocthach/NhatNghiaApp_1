@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="10dp"
+    app:cardCornerRadius="10dp"
+
+  >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="#E4DCCF"
+        android:layout_height="146dp">
+
+        <ImageView
+            android:id="@+id/img_sach1"
+            android:layout_width="150dp"
+            android:layout_height="200dp"
+            android:src="@drawable/cona" />
+        <!--ten sach-->
+        <TextView
+            android:id="@+id/tvten"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/img_sach1"
+            android:text="Ten sach :"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/tvten"
+            android:text="Caona tham tu lung danh"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+        <!--tac gia-->
+        <TextView
+            android:id="@+id/tvtg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/tvten"
+            android:layout_alignBottom="@+id/tvten"
+            android:layout_marginEnd="26dp"
+            android:layout_marginBottom="-27dp"
+            android:text="Tac gia"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvtacgia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/tvName"
+            android:layout_alignBottom="@+id/tvName"
+            android:layout_marginEnd="60dp"
+            android:layout_marginBottom="-28dp"
+            android:text="Aoyama Gōshō"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+        <!--The loai-->
+
+        <TextView
+
+            android:id="@+id/tvtl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/tvtacgia"
+            android:layout_alignBottom="@+id/tvtacgia"
+            android:layout_marginEnd="138dp"
+            android:layout_marginBottom="-32dp"
+            android:text="The loai"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+
+            android:id="@+id/tvtheloai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/tvtl"
+            android:layout_alignBottom="@+id/tvtl"
+            android:layout_marginEnd="-116dp"
+            android:layout_marginBottom="0dp"
+            android:text="Trinh tham"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+        <!--id-->
+        <TextView
+            android:id="@+id/tvtv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/tvtheloai"
+            android:layout_alignBottom="@+id/tvtheloai"
+            android:layout_marginEnd="155dp"
+            android:layout_marginBottom="-33dp"
+            android:text="ID"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/tvtv"
+            android:layout_alignBottom="@+id/tvtv"
+            android:layout_marginEnd="-239dp"
+            android:layout_marginBottom="1dp"
+            android:text="duchai0408@gmail.com"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

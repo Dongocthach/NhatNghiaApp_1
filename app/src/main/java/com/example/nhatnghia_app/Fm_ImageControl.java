@@ -128,7 +128,9 @@ public class Fm_ImageControl extends Fragment {
 //        });
 
 
-        storageReference  = FirebaseStorage.getInstance().getReference("iamges/2022_07_16_07_14_31.jpeg");
+//      storageReference  = FirebaseStorage.getInstance().getReference("images/"+"2022_07_16_07_14_31"+".jpeg");
+//      storageReference = FirebaseStorage.getInstance().getReferenceFromUrl("gs://nhatnghiaappteamwork.appspot.com/images/2022_07_16_07_14_31");
+        storageReference = FirebaseStorage.getInstance().getReference().child("images/2022_07_16_07_14_31");
 
         try {
             File localfile = File.createTempFile("tempfile",".jpeg");

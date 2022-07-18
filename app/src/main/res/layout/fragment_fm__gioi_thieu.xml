@@ -30,6 +30,7 @@
                 app:cardElevation="1dp">
 
                 <TextView
+                    android:fontFamily="@font/OLDENGL"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="8dp"
@@ -56,6 +57,7 @@
                         tools:ignore="RltSymmetry">
 
                         <TextView
+                            android:fontFamily="@font/BRUSHSCI"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:paddingTop="11dp"
@@ -66,6 +68,7 @@
                             android:textStyle="bold" />
 
                         <TextView
+                            android:fontFamily="@font/BRUSHSCI"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:paddingTop="11dp"
@@ -76,6 +79,7 @@
                             android:textStyle="bold" />
 
                         <TextView
+                            android:fontFamily="@font/BRUSHSCI"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:paddingTop="11dp"
@@ -86,6 +90,7 @@
                             android:textStyle="bold" />
 
                         <TextView
+                            android:fontFamily="@font/BRUSHSCI"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:paddingTop="11dp"
@@ -96,6 +101,7 @@
                             android:textStyle="bold" />
 
                         <TextView
+                            android:fontFamily="@font/BRUSHSCI"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:paddingTop="11dp"
@@ -106,6 +112,7 @@
                             android:textStyle="bold" />
 
                         <TextView
+                            android:fontFamily="@font/BRUSHSCI"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:paddingTop="11dp"
@@ -116,6 +123,7 @@
                             android:textStyle="bold" />
 
                         <TextView
+                            android:fontFamily="@font/BRUSHSCI"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:paddingTop="11dp"
@@ -126,6 +134,7 @@
                             android:textStyle="bold" />
 
                         <TextView
+                            android:fontFamily="@font/BRUSHSCI"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:paddingTop="11dp"
@@ -136,6 +145,7 @@
                             android:textStyle="bold" />
 
                         <TextView
+                            android:fontFamily="@font/BRUSHSCI"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:paddingTop="11dp"
@@ -275,6 +285,7 @@
                 card_view:cardElevation="1dp">
 
                 <TextView
+                    android:fontFamily="@font/OLDENGL"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="8dp"

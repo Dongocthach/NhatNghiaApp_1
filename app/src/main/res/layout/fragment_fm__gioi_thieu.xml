@@ -30,6 +30,10 @@
                 app:cardElevation="1dp">
 
                 <TextView
+<<<<<<< HEAD
+=======
+                    android:fontFamily="@font/ol"
+>>>>>>> origin/hai
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="8dp"
@@ -56,6 +60,10 @@
                         tools:ignore="RltSymmetry">
 
                         <TextView
+<<<<<<< HEAD
+=======
+                            android:fontFamily="@font/br"
+>>>>>>> origin/hai
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:paddingTop="11dp"
@@ -66,6 +74,10 @@
                             android:textStyle="bold" />
 
                         <TextView
+<<<<<<< HEAD
+=======
+                            android:fontFamily="@font/br"
+>>>>>>> origin/hai
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:paddingTop="11dp"
@@ -76,6 +88,10 @@
                             android:textStyle="bold" />
 
                         <TextView
+<<<<<<< HEAD
+=======
+                            android:fontFamily="@font/br"
+>>>>>>> origin/hai
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:paddingTop="11dp"
@@ -86,6 +102,10 @@
                             android:textStyle="bold" />
 
                         <TextView
+<<<<<<< HEAD
+=======
+                            android:fontFamily="@font/br"
+>>>>>>> origin/hai
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:paddingTop="11dp"
@@ -96,6 +116,10 @@
                             android:textStyle="bold" />
 
                         <TextView
+<<<<<<< HEAD
+=======
+                            android:fontFamily="@font/br"
+>>>>>>> origin/hai
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:paddingTop="11dp"
@@ -106,6 +130,10 @@
                             android:textStyle="bold" />
 
                         <TextView
+<<<<<<< HEAD
+=======
+                            android:fontFamily="@font/br"
+>>>>>>> origin/hai
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:paddingTop="11dp"
@@ -116,6 +144,10 @@
                             android:textStyle="bold" />
 
                         <TextView
+<<<<<<< HEAD
+=======
+                            android:fontFamily="@font/br"
+>>>>>>> origin/hai
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:paddingTop="11dp"
@@ -126,11 +158,30 @@
                             android:textStyle="bold" />
 
                         <TextView
+<<<<<<< HEAD
+=======
+                            android:fontFamily="@font/br"
+>>>>>>> origin/hai
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:paddingTop="11dp"
                             android:paddingBottom="12dp"
+<<<<<<< HEAD
                             android:text="Dự án: "
+=======
+                            android:text="SĐT liên hệ: "
+                            android:textColor="@color/text_color"
+                            android:textSize="19sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:fontFamily="@font/br"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="11dp"
+                            android:paddingBottom="12dp"
+                            android:text="Địa chỉ: "
+>>>>>>> origin/hai
                             android:textColor="@color/text_color"
                             android:textSize="19sp"
                             android:textStyle="bold" />
@@ -154,7 +205,11 @@
                             android:paddingTop="11dp"
                             android:paddingBottom="12dp"
                             android:scrollHorizontally="true"
+<<<<<<< HEAD
                             android:text="Quản lý thu chi"
+=======
+                            android:text="Quản lý thư viện"
+>>>>>>> origin/hai
                             android:textColor="@color/text_color"
                             android:textSize="19sp" />
 
@@ -165,7 +220,11 @@
                             android:gravity="end"
                             android:paddingTop="11dp"
                             android:paddingBottom="12dp"
+<<<<<<< HEAD
                             android:text="01/04/2021"
+=======
+                            android:text="18/07/2022"
+>>>>>>> origin/hai
                             android:textColor="@color/text_color"
                             android:textSize="19sp" />
 
@@ -198,7 +257,11 @@
                             android:gravity="end"
                             android:paddingTop="11dp"
                             android:paddingBottom="12dp"
+<<<<<<< HEAD
                             android:text="Vũ Đức Hải"
+=======
+                            android:text="Tập thể nhóm 4"
+>>>>>>> origin/hai
                             android:textColor="@color/text_color"
                             android:textSize="19sp" />
 
@@ -231,9 +294,30 @@
                             android:gravity="end"
                             android:paddingTop="11dp"
                             android:paddingBottom="12dp"
+<<<<<<< HEAD
                             android:text="Assignment"
                             android:textColor="@color/text_color"
                             android:textSize="19sp" />
+=======
+                            android:text="0867704364"
+                            android:textColor="@color/text_color"
+                            android:textSize="19sp" />
+
+                        <Button
+                            android:id="@+id/btndiachi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:gravity="end"
+                            android:paddingTop="11dp"
+                            android:paddingBottom="12dp"
+                            app:backgroundTint="@null"
+                            android:text="ấn vào đây để biết thêm"
+                            android:background="@drawable/mau"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:textSize="11sp" />
+>>>>>>> origin/hai
                     </LinearLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -250,6 +334,10 @@
                 card_view:cardElevation="1dp">
 
                 <TextView
+<<<<<<< HEAD
+=======
+                    android:fontFamily="@font/ol"
+>>>>>>> origin/hai
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="8dp"
@@ -285,6 +373,7 @@
                         android:src="@drawable/mes" />
 
                     <ImageView
+<<<<<<< HEAD
                         android:id="@+id/imgShare"
                         android:layout_width="32dp"
                         android:layout_height="32dp"
@@ -306,6 +395,17 @@
                         android:layout_marginStart="16dp"
 
                         android:src="@drawable/sky" />
+=======
+                        android:id="@+id/imgzalo"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_marginEnd="8dp"
+
+                        android:src="@drawable/zalo" />
+
+
+
+>>>>>>> origin/hai
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>

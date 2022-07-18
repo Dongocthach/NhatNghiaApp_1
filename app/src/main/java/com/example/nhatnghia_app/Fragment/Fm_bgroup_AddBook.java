@@ -1,5 +1,7 @@
 package com.example.nhatnghia_app.Fragment;
 
+
+
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -45,12 +47,11 @@ public class Fm_bgroup_AddBook extends Fragment {
         ed4 = view.findViewById(R.id.book_ed4);
         ed5 = view.findViewById(R.id.book_ed5);
         imageView = view.findViewById(R.id.image);
-
-        Spinner spinner = (Spinner) view.findViewById(R.id.spinner);
-        ArrayAdapter<String> adapter = ArrayAdapter.createFromResource(this,
-                imgLinkList, android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner.setAdapter(adapter);
+//
+//        Spinner spinner = (Spinner) view.findViewById(R.id.spinner);
+//        ArrayAdapter<String> adapter = ArrayAdapter.createFromResource(this, imgLinkList, android.R.layout.simple_spinner_item);
+//        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+//        spinner.setAdapter(adapter);
 
         btn1 = view.findViewById(R.id.btn_pushdata);
         btn2 = view.findViewById(R.id.btn_clear);

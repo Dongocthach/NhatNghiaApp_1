@@ -71,8 +71,7 @@ public class Fm_GioiThieu extends Fragment {
         btndiachi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(),Fm_DiaChi.class);
-                startActivity(intent);
+
             }
         });
         return view;

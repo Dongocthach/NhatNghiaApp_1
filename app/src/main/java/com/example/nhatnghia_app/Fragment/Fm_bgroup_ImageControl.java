@@ -58,8 +58,6 @@ public class Fm_bgroup_ImageControl extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-
-
         if (ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.READ_EXTERNAL_STORAGE)
                 != PackageManager.PERMISSION_GRANTED){
             ActivityCompat.requestPermissions(getActivity(),new String[]{

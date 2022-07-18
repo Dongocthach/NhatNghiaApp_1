@@ -23,10 +23,14 @@ import com.example.nhatnghia_app.Fragment.Fm_QuanLyThanhVien;
 import com.example.nhatnghia_app.Fragment.Fm_TrangChinh;
 import com.google.android.material.navigation.NavigationView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity{
     Toolbar toolbar;
     DrawerLayout drawerLayout;
     NavigationView navigationView;
+    public static ArrayList<String> imgLinkList = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,7 +47,7 @@ public class MainActivity extends AppCompatActivity{
         actionBar.setDisplayHomeAsUpEnabled(true);
 
         FragmentManager fragmentManager = getSupportFragmentManager();
-        fragmentManager.beginTransaction().replace(R.id.frameLayout,new Fm_bgroup_ImageControl()).commit();
+        fragmentManager.beginTransaction().replace(R.id.frameLayout,new Fm_TrangChinh()).commit();
 
 
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {

@@ -1,5 +1,7 @@
 package com.example.nhatnghia_app.Fragment;
 
+import static com.example.nhatnghia_app.MainActivity.imgLinkList;
+
 import android.Manifest;
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -41,6 +43,7 @@ public class Fm_bgroup_ImageControl extends Fragment {
     Uri imageUri;
     StorageReference storageReference;
     ProgressDialog progressDialog;
+    private Button btn1,btn2;
 
 
 
@@ -65,7 +68,6 @@ public class Fm_bgroup_ImageControl extends Fragment {
         View v= inflater.inflate(R.layout.fragment_fm__image_control, container, false);
 
 
-        Button btn1,btn2;
 
         imageView = v.findViewById(R.id.firebaseimage);
         btn1 = v.findViewById(R.id.selectImagebtn);
@@ -101,6 +103,7 @@ public class Fm_bgroup_ImageControl extends Fragment {
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss", Locale.JAPAN);
         Date now = new Date();
         String fileName = formatter.format(now).replace("_","");
+        imgLinkList.add(fileName);
         storageReference = FirebaseStorage.getInstance().getReference("images/"+fileName);
 
 
@@ -129,30 +132,7 @@ public class Fm_bgroup_ImageControl extends Fragment {
         });
 
 
-//      storageReference  = FirebaseStorage.getInstance().getReference("images/"+"2022_07_16_07_14_31"+".jpeg");
-//      storageReference = FirebaseStorage.getInstance().getReferenceFromUrl("gs://nhatnghiaappteamwork.appspot.com/images/2022_07_16_07_14_31");
-//        storageReference = FirebaseStorage.getInstance().getReference().child("images/2022_07_16_07_14_31");
-//
-//        try {
-//            File localfile = File.createTempFile("tempfile",".jpeg");
-//            storageReference.getFile(localfile)
-//                    .addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {
-//                        @Override
-//                        public void onSuccess(FileDownloadTask.TaskSnapshot taskSnapshot) {
-//                            if(progressDialog.isShowing())
-//                                progressDialog.dismiss();
-//                            Bitmap bitmap = BitmapFactory.decodeFile(localfile.getAbsolutePath());
-//                            imageView.setImageBitmap(bitmap);
-//                        }
-//                    }).addOnFailureListener(new OnFailureListener() {
-//                @Override
-//                public void onFailure(@NonNull Exception e) {
-//                    Toast.makeText(getActivity(), "Failed to retrieve", Toast.LENGTH_SHORT).show();
-//                }
-//            });
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
+
 
 
     }
@@ -177,6 +157,29 @@ public class Fm_bgroup_ImageControl extends Fragment {
             imageView.setImageURI(imageUri);
 
 
+        }
+    }
+    public void onClickFetchImage(String linkImage, ImageView imageView){
+        //      storageReference = FirebaseStorage.getInstance().getReferenceFromUrl("gs://nhatnghiaappteamwork.appspot.com/images/2022_07_16_07_14_31");
+        storageReference = FirebaseStorage.getInstance().getReference().child("images/"+ linkImage);
+
+        try {
+            File localfile = File.createTempFile("tempfile",".jpeg");
+            storageReference.getFile(localfile)
+                    .addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {
+                        @Override
+                        public void onSuccess(FileDownloadTask.TaskSnapshot taskSnapshot) {
+                            Bitmap bitmap = BitmapFactory.decodeFile(localfile.getAbsolutePath());
+                            imageView.setImageBitmap(bitmap);
+                        }
+                    }).addOnFailureListener(new OnFailureListener() {
+                @Override
+                public void onFailure(@NonNull Exception e) {
+                    Toast.makeText(getActivity(), "Failed to retrieve", Toast.LENGTH_SHORT).show();
+                }
+            });
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }

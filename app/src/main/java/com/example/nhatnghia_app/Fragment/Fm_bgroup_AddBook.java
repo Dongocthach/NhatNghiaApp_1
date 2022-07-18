@@ -1,5 +1,11 @@
 package com.example.nhatnghia_app.Fragment;
 
+
+
+
+
+import static com.example.nhatnghia_app.Fragment.Fm_bgroup_ImageControl.idImageList;
+
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -9,10 +15,12 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.SimpleAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -22,14 +30,19 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class Fm_bgroup_AddBook extends Fragment {
+import java.util.ArrayList;
+import java.util.List;
+
+public class Fm_bgroup_AddBook extends Fragment implements AdapterView.OnItemSelectedListener {
     private Button btn1,btn2,btn3;
     private EditText ed1,ed2,ed3,ed4,ed5;
     private ImageView imageView;
+    public  ArrayList<String> imgLinkList = new ArrayList<String>();
     Fm_bgroup_ImageControl fm_bgroup_imageControl;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
 
     }
@@ -38,6 +51,7 @@ public class Fm_bgroup_AddBook extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+
         View view= inflater.inflate(R.layout.fragment_fm_bgroupd__add_book, container, false);
         ed1 = view.findViewById(R.id.book_ed1);
         ed2 = view.findViewById(R.id.book_ed2);
@@ -45,12 +59,20 @@ public class Fm_bgroup_AddBook extends Fragment {
         ed4 = view.findViewById(R.id.book_ed4);
         ed5 = view.findViewById(R.id.book_ed5);
         imageView = view.findViewById(R.id.image);
-
+        idImageList.add("20220718152511");
         Spinner spinner = (Spinner) view.findViewById(R.id.spinner);
-        ArrayAdapter<String> adapter = ArrayAdapter.createFromResource(this,
-                imgLinkList, android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner.setAdapter(adapter);
+
+        spinner.setOnItemSelectedListener(this);
+
+
+
+        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_item, idImageList);
+        // Drop down layout style - list view with radio button
+        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        // attaching data adapter to spinner
+        spinner.setAdapter(dataAdapter);
+
+
 
         btn1 = view.findViewById(R.id.btn_pushdata);
         btn2 = view.findViewById(R.id.btn_clear);
@@ -96,4 +118,18 @@ public class Fm_bgroup_AddBook extends Fragment {
 
     }
 
+
+    @Override
+    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+        String item = adapterView.getItemAtPosition(i).toString();
+//        fm_bgroup_imageControl.onClickFetchImage(item.toString(),imageView);
+        ed5.setText(item);
+
+
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> adapterView) {
+
+    }
 }

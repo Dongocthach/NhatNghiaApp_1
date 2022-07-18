@@ -1,6 +1,6 @@
 package com.example.nhatnghia_app.Fragment;
 
-import static com.example.nhatnghia_app.MainActivity.imgLinkList;
+
 
 import android.Manifest;
 import android.app.ProgressDialog;
@@ -17,10 +17,12 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -35,7 +37,9 @@ import com.google.firebase.storage.UploadTask;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.Locale;
 
 public class Fm_bgroup_ImageControl extends Fragment {
@@ -43,13 +47,17 @@ public class Fm_bgroup_ImageControl extends Fragment {
     Uri imageUri;
     StorageReference storageReference;
     ProgressDialog progressDialog;
+    public static List<String> idImageList = new ArrayList<String>();
     private Button btn1,btn2;
+    private EditText ed1;
+    private String fileName;
 
 
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
 
 
         if (ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.READ_EXTERNAL_STORAGE)
@@ -72,6 +80,7 @@ public class Fm_bgroup_ImageControl extends Fragment {
         imageView = v.findViewById(R.id.firebaseimage);
         btn1 = v.findViewById(R.id.selectImagebtn);
         btn2 = v.findViewById(R.id.uploadimagebtn);
+        ed1  = v.findViewById(R.id.edit_1);
 
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -102,8 +111,13 @@ public class Fm_bgroup_ImageControl extends Fragment {
 
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss", Locale.JAPAN);
         Date now = new Date();
-        String fileName = formatter.format(now).replace("_","");
-        imgLinkList.add(fileName);
+
+        if(ed1.getText().toString().isEmpty())
+             fileName = formatter.format(now).replace("_","");
+        else
+            fileName =ed1.getText().toString();
+
+
         storageReference = FirebaseStorage.getInstance().getReference("images/"+fileName);
 
 
@@ -116,6 +130,9 @@ public class Fm_bgroup_ImageControl extends Fragment {
                         Toast.makeText(getActivity(),"Successfully Uploaded",Toast.LENGTH_SHORT).show();
                         if (progressDialog.isShowing())
                             progressDialog.dismiss();
+                        idImageList.add(0,fileName);
+                        ed1.setText("");
+                        Log.i("Image ID", fileName);
 
                     }
                 }).addOnFailureListener(new OnFailureListener() {
@@ -162,24 +179,27 @@ public class Fm_bgroup_ImageControl extends Fragment {
     public void onClickFetchImage(String linkImage, ImageView imageView){
         //      storageReference = FirebaseStorage.getInstance().getReferenceFromUrl("gs://nhatnghiaappteamwork.appspot.com/images/2022_07_16_07_14_31");
         storageReference = FirebaseStorage.getInstance().getReference().child("images/"+ linkImage);
+        if(linkImage !=null){
+            try {
+                File localfile = File.createTempFile("tempfile",".jpeg");
+                storageReference.getFile(localfile)
+                        .addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {
+                            @Override
+                            public void onSuccess(FileDownloadTask.TaskSnapshot taskSnapshot) {
+                                Bitmap bitmap = BitmapFactory.decodeFile(localfile.getAbsolutePath());
+                                imageView.setImageBitmap(bitmap);
+                            }
+                        }).addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(getActivity(), "Failed to retrieve", Toast.LENGTH_SHORT).show();
+                    }
+                });
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }else
+            return;;
 
-        try {
-            File localfile = File.createTempFile("tempfile",".jpeg");
-            storageReference.getFile(localfile)
-                    .addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {
-                        @Override
-                        public void onSuccess(FileDownloadTask.TaskSnapshot taskSnapshot) {
-                            Bitmap bitmap = BitmapFactory.decodeFile(localfile.getAbsolutePath());
-                            imageView.setImageBitmap(bitmap);
-                        }
-                    }).addOnFailureListener(new OnFailureListener() {
-                @Override
-                public void onFailure(@NonNull Exception e) {
-                    Toast.makeText(getActivity(), "Failed to retrieve", Toast.LENGTH_SHORT).show();
-                }
-            });
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 }

@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity{
     Toolbar toolbar;
     DrawerLayout drawerLayout;
     NavigationView navigationView;
-    public static ArrayList<String> imgLinkList = new ArrayList<>();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

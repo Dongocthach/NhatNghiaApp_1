@@ -1,5 +1,8 @@
 package com.example.nhatnghia_app;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Sach {
     private  String TenSach;
     private String tenTacGia;
@@ -58,4 +61,13 @@ public class Sach {
     public void setImgsach(String imgsach) {
         this.imgsach = imgsach;
     }
+    public Map<String, Object> toMap(){
+        HashMap<String, Object> result = new HashMap<>();
+        result.put("tenSach",TenSach);
+        result.put("tenTacGia",tenTacGia);
+        result.put("theLoai",TheLoai);
+        result.put("imgsach",imgsach);
+        return result;
+    }
+
 }

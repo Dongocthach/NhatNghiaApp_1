@@ -28,10 +28,12 @@
         <entry key="..\:/nhatnghia/NhatNghiaApp_1/app/src/main/res/drawable/button.xml" value="0.1475" />
         <entry key="..\:/nhatnghia/NhatNghiaApp_1/app/src/main/res/drawable/mau.xml" value="0.142" />
         <entry key="..\:/nhatnghia/NhatNghiaApp_1/app/src/main/res/layout/activity_main.xml" value="0.1375" />
+        <entry key="..\:/nhatnghia/NhatNghiaApp_1/app/src/main/res/layout/book_update_dialog.xml" value="0.18229166666666666" />
         <entry key="..\:/nhatnghia/NhatNghiaApp_1/app/src/main/res/layout/fragment_fm__cap_nhap_tai_khoan.xml" value="0.1375" />
         <entry key="..\:/nhatnghia/NhatNghiaApp_1/app/src/main/res/layout/fragment_fm__dia_chi.xml" value="0.1375" />
         <entry key="..\:/nhatnghia/NhatNghiaApp_1/app/src/main/res/layout/fragment_fm__doi_mat_khau.xml" value="0.1375" />
         <entry key="..\:/nhatnghia/NhatNghiaApp_1/app/src/main/res/layout/fragment_fm__gioi_thieu.xml" value="0.2911458333333333" />
+        <entry key="..\:/nhatnghia/NhatNghiaApp_1/app/src/main/res/layout/fragment_fm__image_control.xml" value="0.18229166666666666" />
         <entry key="..\:/nhatnghia/NhatNghiaApp_1/app/src/main/res/layout/fragment_fm__quan_ly_sach.xml" value="0.1375" />
         <entry key="..\:/nhatnghia/NhatNghiaApp_1/app/src/main/res/layout/fragment_fm__quan_ly_thanh_vien.xml" value="0.1375" />
         <entry key="..\:/nhatnghia/NhatNghiaApp_1/app/src/main/res/layout/fragment_fm__trang_chinh.xml" value="0.1375" />
@@ -39,6 +41,7 @@
         <entry key="..\:/nhatnghia/NhatNghiaApp_1/app/src/main/res/layout/fragment_fm_bgroupd__add_book.xml" value="0.2879999900124293" />
         <entry key="..\:/nhatnghia/NhatNghiaApp_1/app/src/main/res/layout/header_view_layout.xml" value="0.2911458333333333" />
         <entry key="..\:/nhatnghia/NhatNghiaApp_1/app/src/main/res/layout/item_sach1.xml" value="0.4363636212309535" />
+        <entry key="..\:/nhatnghia/NhatNghiaApp_1/app/src/main/res/layout/item_sach2.xml" value="0.18229166666666666" />
         <entry key="..\:/nhatnghia/NhatNghiaApp_1/app/src/main/res/layout/toolbar.xml" value="0.1375" />
       </map>
     </option>

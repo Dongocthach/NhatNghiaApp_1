@@ -39,7 +39,7 @@
         android:layout_height="50dp"
         android:layout_marginHorizontal="16dp"
         android:layout_marginBottom="96dp"
-        android:text="Image Name"
+        android:hint="Image Name"
         app:layout_constraintBottom_toTopOf="@+id/uploadimagebtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.968"

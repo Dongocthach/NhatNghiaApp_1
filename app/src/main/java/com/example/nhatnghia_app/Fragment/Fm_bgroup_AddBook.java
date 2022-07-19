@@ -1,12 +1,5 @@
 package com.example.nhatnghia_app.Fragment;
 
-
-
-
-
-
-
-
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;

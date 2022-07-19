@@ -49,6 +49,7 @@
                 android:layout_height="wrap_content"
                 android:hint="LinkImage"/>
             <Button
+                android:background="@drawable/addbook"
                 app:backgroundTint="@null"
                 android:id="@+id/btn_fetchImage"
                 android:layout_width="0dp"
@@ -73,9 +74,11 @@
                 android:layout_width="0dp"
                 android:layout_weight="0.3"
                 android:layout_height="wrap_content"
-                android:text="Recently Added"></Spinner>
+                android:text="Recently Added"/>
         </LinearLayout>
         <Button
+
+            android:background="@drawable/addbook"
             app:backgroundTint="@null"
             android:layout_marginTop="10dp"
             android:id="@+id/btn_pushdata"
@@ -86,12 +89,13 @@
         </Button>
 
         <Button
+            android:background="@drawable/addbook"
             app:backgroundTint="@null"
             android:layout_marginTop="10dp"
             android:id="@+id/btn_clear"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Clear"></Button>
+            android:text="Clear"/>
         <LinearLayout
             android:layout_marginTop="10dp"
             android:layout_width="match_parent"
@@ -106,6 +110,7 @@
                 android:hint="tim kiem" />
 
             <Button
+
                 android:layout_marginTop="-4dp"
                 android:id="@+id/book_btnsearch"
                 android:layout_width="40dp"

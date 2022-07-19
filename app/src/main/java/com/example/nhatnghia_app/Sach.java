@@ -13,12 +13,12 @@ public class Sach {
     public Sach() {
     }
 
-    public Sach(String ID, String imgsach, String tenSach, String tenTacGia, String theLoai) {
+    public Sach(String ID, String imgsach, String tenSach, String tenTacGia, String TheLoai) {
         this.ID = ID;
         this.imgsach = imgsach;
         this.TenSach = tenSach;
         this.tenTacGia = tenTacGia;
-        this.TheLoai = theLoai;
+        this.TheLoai = TheLoai;
 
     }
 
@@ -42,8 +42,8 @@ public class Sach {
         return TheLoai;
     }
 
-    public void setTheLoai(String theLoai) {
-        TheLoai = theLoai;
+    public void setTheLoai(String TheLoai) {
+        this.TheLoai = TheLoai;
     }
 
     public String getID() {
@@ -64,7 +64,10 @@ public class Sach {
 
     public Map<String, Object> toMap(){
         HashMap<String, Object> result = new HashMap<>();
-        result.put("name",TenSach);
+        result.put("tenSach",TenSach);
+        result.put("tenTacGia",tenTacGia);
+        result.put("theLoai",TheLoai);
+        result.put("imgsach",imgsach);
         return result;
     }
 }

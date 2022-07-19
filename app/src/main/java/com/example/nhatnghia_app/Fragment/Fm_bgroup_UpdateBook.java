@@ -18,6 +18,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.nhatnghia_app.BookAdapter2;
@@ -35,17 +36,12 @@ import java.util.List;
 
 
 public class Fm_bgroup_UpdateBook extends Fragment {
-
-
     private RecyclerView recyclerView;
     private BookAdapter2 bookAdapter2;
 
     private Button btn1;
     private EditText ed1;
     private List<Sach> mListBook;
-
-
-
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -67,17 +63,10 @@ public class Fm_bgroup_UpdateBook extends Fragment {
         getListBookFromRealtimeDatabase();
         bookAdapter2 = new BookAdapter2(mListBook, new BookAdapter2.IClickListener() {
             @Override
-            public void onClickUpdateItem(Sach book) {
-
-
-
-            }
+            public void onClickUpdateItem(Sach book) { openDialogUpdate(book); }
 
             @Override
-            public void onClickDeleteItem(Sach book) {
-                onClickDeleteData(book);
-
-            }
+            public void onClickDeleteItem(Sach book) {onClickDeleteData(book); }
         });
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(linearLayoutManager);
@@ -101,7 +90,6 @@ public class Fm_bgroup_UpdateBook extends Fragment {
                     bookAdapter2.notifyDataSetChanged();
                 }
 
-
             }
 
             @Override
@@ -110,7 +98,6 @@ public class Fm_bgroup_UpdateBook extends Fragment {
                 if(mListBook == null || mListBook.isEmpty()){
                     return;
                 }
-
                 for(int i = 0; i < mListBook.size();i++){
                     if(bk.getID() == mListBook.get(i).getID()){
                         mListBook.set(i,bk);
@@ -148,48 +135,77 @@ public class Fm_bgroup_UpdateBook extends Fragment {
         });
 
     }
-//    private void openDialogUpdate(Sach bk){
-//        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-//
-//        LayoutInflater inflater = (getActivity()).getLayoutInflater();
-//        View vi = inflater.inflate(R.layout.fragment_fm_bgroupd__add_book, null);
-//        builder.setView(vi);
-//        AlertDialog alertDialog = builder.create();
-////        alertDialog.getWindow().setBackgroundDrawableResource(R.drawable.dialog_add_bg);
-//        alertDialog.show();
-//
-//        Button btn1,btn2,btn3;
-//        EditText ed1,ed2,ed3,ed4,ed5;
-//        ImageView imageView;
-//        dia_ed1 = vi.findViewById(R.id.dialog_update_book_ed1);
-//        dia_ed2 = vi.findViewById(R.id.dialog_update_book_ed2);
-//        dia_btn1 = vi.findViewById(R.id.dialog_update_book_btn1);
-//        dia_btn2 = vi.findViewById(R.id.dialog_update_book_btn2);
-//        dia_btn3 = vi.findViewById(R.id.dialog_update_book_btn3);
-//        dia_ed1.setText(String.valueOf(bk.getId()));
-//        dia_btn1.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                FirebaseDatabase database = FirebaseDatabase.getInstance();
-//                DatabaseReference myRef = database.getReference("Books");
-//                String newname = dia_ed2.getText().toString().trim();
-//
-//                bk.setTenSach(newname);
-//
-//
-//                myRef.child(String.valueOf(bk.getID())).updateChildren(bk.toMap(), new DatabaseReference.CompletionListener(){
-//                    @Override
-//                    public void onComplete(@Nullable DatabaseError error, @NonNull DatabaseReference ref) {
-//                        Toast.makeText(getActivity(),"update success", Toast.LENGTH_SHORT).show();
-//
-//                    }
-//                });
-//
-//
-//            }
-//        });
-//
-//    }
+    private void openDialogUpdate(Sach bk){
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+
+        LayoutInflater inflater = (getActivity()).getLayoutInflater();
+        View vi = inflater.inflate(R.layout.book_update_dialog, null);
+        builder.setView(vi);
+        AlertDialog alertDialog = builder.create();
+//        alertDialog.getWindow().setBackgroundDrawableResource(R.drawable.dialog_add_bg);
+        alertDialog.show();
+
+        Button dia_btn1,dia_btn2,dia_btn3;
+        TextView dia_ed1;
+        EditText dia_ed2,dia_ed3,dia_ed4,dia_ed5;
+        ImageView imageView;
+        imageView= vi.findViewById(R.id.image_dialog);
+        dia_ed1 = vi.findViewById(R.id.book_ed1);
+        dia_ed2 = vi.findViewById(R.id.book_ed2);
+        dia_ed3 = vi.findViewById(R.id.book_ed3);
+        dia_ed4 = vi.findViewById(R.id.book_ed4);
+        dia_ed5 = vi.findViewById(R.id.book_ed5);
+
+        dia_btn1 = vi.findViewById(R.id.update_btn);
+        dia_btn2 = vi.findViewById(R.id.return_btn);
+        dia_btn3 = vi.findViewById(R.id.dialog_fetchimage_btn);
+
+        dia_ed1.setText("ID: "+bk.getID());
+        dia_ed2.setText(bk.getTenSach());
+        dia_ed3.setText(bk.getTenTacGia());
+        dia_ed4.setText(bk.getTheLoai());
+        dia_ed5.setText(bk.getImgsach());
+        dia_btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FirebaseDatabase database = FirebaseDatabase.getInstance();
+                DatabaseReference myRef = database.getReference("Books");
+                String newname = dia_ed2.getText().toString().trim();
+                String newtacgia = dia_ed3.getText().toString().trim();
+                String newtheloai = dia_ed4.getText().toString().trim();
+                String newimglink = dia_ed5.getText().toString().trim();
+
+                bk.setTenSach(newname);
+                bk.setTenTacGia(newtacgia);
+                bk.setTheLoai(newtheloai);
+                bk.setImgsach(newimglink);
+
+                myRef.child(String.valueOf(bk.getID())).updateChildren(bk.toMap(), new DatabaseReference.CompletionListener(){
+                    @Override
+                    public void onComplete(@Nullable DatabaseError error, @NonNull DatabaseReference ref) {
+                        Toast.makeText(getActivity(),"update success", Toast.LENGTH_SHORT).show();
+
+                    }
+                });
+
+
+            }
+        });
+        dia_btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                alertDialog.dismiss();
+            }
+        });
+        dia_btn3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Fm_bgroup_ImageControl fm_bgroup_imageControl=new Fm_bgroup_ImageControl();
+                fm_bgroup_imageControl.onClickFetchImage(dia_ed5.getText().toString(),imageView);
+            }
+        });
+
+    }
     private void onClickDeleteData(Sach book){
         new AlertDialog.Builder(getActivity())
                 .setTitle(getString(R.string.app_name))

@@ -5,8 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="6dp"
+    android:background="@drawable/itemsach2"
     android:id="@+id/fragmentContainerView2"
     tools:context=".Fragment.Fm_bgroup_AddBook">
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -45,6 +47,8 @@
                 android:layout_height="wrap_content"
                 android:hint="LinkImage"/>
             <Button
+                android:background="@drawable/addbook"
+                app:backgroundTint="@null"
                 android:id="@+id/dialog_fetchimage_btn"
                 android:layout_width="0dp"
                 android:layout_weight="0.3"
@@ -67,9 +71,11 @@
                 android:layout_width="0dp"
                 android:layout_weight="0.3"
                 android:layout_height="wrap_content"
-                android:text="Recently Added"></Spinner>
+                android:text="Recently Added"/>
         </LinearLayout>
         <Button
+            android:background="@drawable/addbook"
+            app:backgroundTint="@null"
             android:id="@+id/update_btn"
             android:text="update"
             android:layout_width="match_parent"
@@ -78,11 +84,15 @@
         </Button>
 
         <Button
+            android:background="@drawable/addbook"
+            app:backgroundTint="@null"
             android:id="@+id/return_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="return"></Button>
+            android:text="return"/>
 
     </LinearLayout>
+
+
 
 </FrameLayout>

@@ -2,14 +2,11 @@ package com.example.nhatnghia_app;
 
 import android.app.ProgressDialog;
 import android.content.Context;
-<<<<<<< HEAD
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.util.Log;
-=======
 import android.net.Uri;
->>>>>>> hai
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,7 +17,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-<<<<<<< HEAD
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.storage.FileDownloadTask;
@@ -29,10 +25,8 @@ import com.google.firebase.storage.StorageReference;
 
 import java.io.File;
 import java.io.IOException;
-=======
 import com.google.firebase.storage.StorageReference;
 
->>>>>>> hai
 import java.util.List;
 
 public class BookAdapter2 extends RecyclerView.Adapter<BookAdapter2.SachViewHodlder> {

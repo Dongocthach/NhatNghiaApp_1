@@ -21,27 +21,36 @@
             <EditText
                 android:id="@+id/search_edit"
                android:layout_width="0dp"
-                android:layout_weight="0.6"
+                android:layout_weight="0.9"
                 android:hint="tim kiem"
                 android:layout_height="wrap_content"/>
             <Button
                 android:id="@+id/book_btnsearch"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.4"
-                android:text="search" />
-
-                android:layout_width="390dp"
-                android:hint="tim kiem"
-                android:layout_height="wrap_content"/>
-
-            <Button
-                android:id="@+id/book_btnsearch"
-                android:layout_marginLeft="-40dp"
-                android:layout_width="36dp"
-                android:layout_height="33dp"
+                android:layout_weight="0.1"
+                android:layout_height="30dp"
+                android:paddingTop="10dp"
+                android:layout_margin="6dp"
                 android:background="@drawable/kinhlup"
-                app:backgroundTint="@null" />
+                app:backgroundTint="@null"/>
+<!--                        </Button>-->
+            <!--            <Button-->
+<!--                android:id="@+id/book_btnsearch"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="0.4"-->
+<!--                android:text="search" />-->
+
+<!--                android:layout_width="390dp"-->
+<!--                android:hint="tim kiem"-->
+<!--                android:layout_height="wrap_content"/>-->
+
+<!--            <Button-->
+<!--                android:id="@+id/book_btnsearch"-->
+<!--                android:width="0dp"-->
+<!--                android:height="wrap_content"-->
+<!--                android:background="@drawable/kinhlup"-->
+<!--                app:backgroundTint="@null" />-->
         </LinearLayout>
 
 

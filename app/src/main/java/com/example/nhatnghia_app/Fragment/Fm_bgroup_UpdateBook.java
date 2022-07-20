@@ -7,10 +7,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
-<<<<<<< HEAD
 import androidx.fragment.app.FragmentManager;
-=======
->>>>>>> hai
+
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -27,10 +25,8 @@ import android.widget.Toast;
 import com.example.nhatnghia_app.BookAdapter2;
 import com.example.nhatnghia_app.R;
 import com.example.nhatnghia_app.Sach;
-<<<<<<< HEAD
 import com.google.android.material.tabs.TabLayout;
-=======
->>>>>>> hai
+
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -39,10 +35,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 import java.util.List;
-<<<<<<< HEAD
 
-=======
->>>>>>> hai
 
 public class Fm_bgroup_UpdateBook extends Fragment {
     private RecyclerView recyclerView;

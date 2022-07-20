@@ -61,10 +61,7 @@ public class Sach {
     public void setImgsach(String imgsach) {
         this.imgsach = imgsach;
     }
-<<<<<<< HEAD
 
-=======
->>>>>>> hai
     public Map<String, Object> toMap(){
         HashMap<String, Object> result = new HashMap<>();
         result.put("tenSach",TenSach);
@@ -73,8 +70,5 @@ public class Sach {
         result.put("imgsach",imgsach);
         return result;
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> hai
 }

@@ -96,7 +96,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Clear"></Button>
-            android:text="Clear"/>
+
         <LinearLayout
             android:layout_marginTop="10dp"
             android:layout_width="match_parent"
@@ -120,8 +120,8 @@
                 android:background="@drawable/kinhlup"
                 app:backgroundTint="@null"
                  />
->>>>>>> hai
 
+    </LinearLayout>
     </LinearLayout>
 
 </FrameLayout>

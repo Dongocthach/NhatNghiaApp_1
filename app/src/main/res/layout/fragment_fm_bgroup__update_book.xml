@@ -18,8 +18,8 @@
             android:layout_height="wrap_content"
             android:layout_margin="6dp"
             android:orientation="horizontal">
-            <EditText
-                android:id="@+id/search_edit"
+            <SearchView
+                android:id="@+id/search_view"
                android:layout_width="0dp"
                 android:layout_weight="0.9"
                 android:hint="tim kiem"

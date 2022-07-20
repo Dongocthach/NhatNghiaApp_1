@@ -11,6 +11,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -27,9 +29,11 @@ import java.io.File;
 import java.io.IOException;
 import com.google.firebase.storage.StorageReference;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
-public class BookAdapter2 extends RecyclerView.Adapter<BookAdapter2.SachViewHodlder> {
+public class BookAdapter2 extends RecyclerView.Adapter<BookAdapter2.SachViewHodlder> implements Filterable {
 
     ImageView imageView;
     Uri imageUri;
@@ -38,7 +42,39 @@ public class BookAdapter2 extends RecyclerView.Adapter<BookAdapter2.SachViewHodl
 
     private Context mContext;
     private List<Sach> mSachList;
+    private List<Sach> mSachListOld;
     private IClickListener mIClickListerner;
+
+    @Override
+    public Filter getFilter() {
+        return new Filter() {
+            @Override
+            protected FilterResults performFiltering(CharSequence charSequence) {
+                String strSearch = charSequence.toString();
+                if(strSearch.isEmpty()){
+                    mSachList = mSachListOld;
+                }else{
+                    List<Sach> list = new ArrayList<>();
+                    for(Sach sach : mSachListOld){
+                        if(sach.getTenSach().toLowerCase().contains(strSearch.toLowerCase())){
+                            list.add(sach);
+                        }
+                    }
+
+                    mSachList = list;
+                }
+                FilterResults filterResults = new FilterResults();
+                filterResults.values = mSachList;
+                return filterResults;
+            }
+
+            @Override
+            protected void publishResults(CharSequence charSequence, FilterResults filterResults) {
+                mSachList = (List<Sach>) filterResults.values;
+                notifyDataSetChanged();
+            }
+        };
+    }
 
     public  interface  IClickListener{
         void onClickUpdateItem(Sach book);
@@ -52,6 +88,11 @@ public class BookAdapter2 extends RecyclerView.Adapter<BookAdapter2.SachViewHodl
     public BookAdapter2(Context mContext, List<Sach> mSachList) {
         this.mContext = mContext;
         this.mSachList = mSachList;
+    }
+
+    public BookAdapter2(List<Sach> mSachList) {
+        this.mSachList = mSachList;
+        this.mSachListOld = mSachList;
     }
 
     public void setData(List<Sach>list){

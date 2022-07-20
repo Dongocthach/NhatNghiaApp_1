@@ -73,6 +73,8 @@ public class BookAdapter2 extends RecyclerView.Adapter<BookAdapter2.SachViewHodl
     public  interface  IClickListener{
         void onClickUpdateItem(Sach book);
         void onClickDeleteItem(Sach book);
+        void onClickIncreaseQuantity(Sach book);
+        void onClickDecreaseQuantity(Sach book);
 
     }
 
@@ -98,6 +100,8 @@ public class BookAdapter2 extends RecyclerView.Adapter<BookAdapter2.SachViewHodl
 
         holder.id.setText(sach.getTenSach());
         holder.tensach.setText(sach.getID());
+        holder.quantity.setText(String.valueOf(sach.getQuantity()));
+        holder.price.setText(String.valueOf(sach.getPrice()));
         holder.btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -108,6 +112,18 @@ public class BookAdapter2 extends RecyclerView.Adapter<BookAdapter2.SachViewHodl
             @Override
             public void onClick(View view) {
                 mIClickListerner.onClickDeleteItem(sach);
+            }
+        });
+        holder.btn3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mIClickListerner.onClickIncreaseQuantity(sach);
+            }
+        });
+        holder.btn4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mIClickListerner.onClickDecreaseQuantity(sach);
             }
         });
     }
@@ -121,16 +137,21 @@ public class BookAdapter2 extends RecyclerView.Adapter<BookAdapter2.SachViewHodl
 
     public class SachViewHodlder extends RecyclerView.ViewHolder {
 
-        private TextView id,tensach;
-        private Button btn1,btn2;
+        private TextView id,tensach,quantity,price;
+        private Button btn1,btn2,btn3,btn4,btn5;
 
 
         public SachViewHodlder(@NonNull View itemView) {
             super(itemView);
             id =itemView.findViewById(R.id.tv1);
             tensach= itemView.findViewById(R.id.tv2);
+            quantity= itemView.findViewById(R.id.tv_quantity);
+            price = itemView.findViewById(R.id.tv_price);
             btn1 = itemView.findViewById(R.id.btn1);
             btn2 = itemView.findViewById(R.id.btn2);
+            btn3 = itemView.findViewById(R.id.btn3);
+            btn4 = itemView.findViewById(R.id.btn4);
+            btn5 = itemView.findViewById(R.id.btn5);
         }
     }
 }

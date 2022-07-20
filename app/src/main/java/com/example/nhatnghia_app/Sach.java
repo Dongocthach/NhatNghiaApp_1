@@ -9,7 +9,8 @@ public class Sach {
     private String TheLoai;
     private String ID;
     private String imgsach;
-
+    private int quantity;
+    private int price;
     public Sach() {
     }
 
@@ -20,6 +21,16 @@ public class Sach {
         this.tenTacGia = tenTacGia;
         this.TheLoai = TheLoai;
 
+    }
+
+    public Sach(String tenSach, String tenTacGia, String theLoai, String ID, String imgsach, int quantity, int price) {
+        TenSach = tenSach;
+        this.tenTacGia = tenTacGia;
+        TheLoai = theLoai;
+        this.ID = ID;
+        this.imgsach = imgsach;
+        this.quantity = quantity;
+        this.price = price;
     }
 
     public String getTenSach() {
@@ -62,12 +73,30 @@ public class Sach {
         this.imgsach = imgsach;
     }
 
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
     public Map<String, Object> toMap(){
         HashMap<String, Object> result = new HashMap<>();
         result.put("tenSach",TenSach);
         result.put("tenTacGia",tenTacGia);
         result.put("theLoai",TheLoai);
         result.put("imgsach",imgsach);
+        result.put("quantity",quantity);
+        result.put("price",price);
         return result;
     }
 

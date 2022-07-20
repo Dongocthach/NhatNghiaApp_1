@@ -17,6 +17,7 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -31,6 +32,8 @@ import android.widget.Toast;
 import com.example.nhatnghia_app.BookAdapter2;
 import com.example.nhatnghia_app.R;
 import com.example.nhatnghia_app.Sach;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.tabs.TabLayout;
 
 import com.google.firebase.database.ChildEventListener;
@@ -47,7 +50,9 @@ public class Fm_bgroup_UpdateBook extends Fragment {
     private RecyclerView recyclerView;
     private BookAdapter2 bookAdapter2;
 
-    private Button btn1;
+    private FirebaseDatabase database = FirebaseDatabase.getInstance();
+
+
     private androidx.appcompat.widget.SearchView searchView;
     private List<Sach> mListBook;
 
@@ -74,6 +79,18 @@ public class Fm_bgroup_UpdateBook extends Fragment {
 
             @Override
             public void onClickDeleteItem(Sach book) {onClickDeleteData(book); }
+
+            @Override
+            public void onClickIncreaseQuantity(Sach book) {
+                onClickInCreaseQuantity(book);
+
+            }
+
+            @Override
+            public void onClickDecreaseQuantity(Sach book) {
+                onClickDeCreaseQuantity(book);
+
+            }
         });
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(linearLayoutManager);
@@ -251,6 +268,42 @@ public class Fm_bgroup_UpdateBook extends Fragment {
                 })
                 .setNegativeButton("cancel", null)
                 .show();
+    }
+    private void onClickInCreaseQuantity(Sach book){
+        DatabaseReference myRef = database.getReference("Books");
+        myRef.child(String.valueOf(book.getID())).child("quantity").setValue(book.getQuantity()+1) .addOnSuccessListener(new OnSuccessListener<Void>() {
+            @Override
+            public void onSuccess(Void aVoid) {
+                // Write was successful!
+                // ...
+            }
+        })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(getActivity(),"loi"+e,Toast.LENGTH_SHORT).show();
+                        // ...
+                    }
+                });
+
+    }
+    private void onClickDeCreaseQuantity(Sach book){
+        DatabaseReference myRef = database.getReference("Books");
+        myRef.child(String.valueOf(book.getID())).child("quantity").setValue(book.getQuantity()-1) .addOnSuccessListener(new OnSuccessListener<Void>() {
+            @Override
+            public void onSuccess(Void aVoid) {
+                // Write was successful!
+                // ...
+            }
+        })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(getActivity(),"loi"+e,Toast.LENGTH_SHORT).show();
+                        // ...
+                    }
+                });
+
     }
 
 

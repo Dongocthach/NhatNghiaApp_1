@@ -62,7 +62,7 @@ public class Fm_bgroup_UpdateBook extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v= inflater.inflate(R.layout.fragment_fm_bgroup__update_book, container, false);
-        btn1 = v.findViewById(R.id.book_btnsearch);
+        
 
 
         recyclerView = v.findViewById(R.id.update_book_rcv);

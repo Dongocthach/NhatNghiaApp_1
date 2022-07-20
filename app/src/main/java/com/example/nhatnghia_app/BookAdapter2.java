@@ -35,11 +35,6 @@ import java.util.Locale;
 
 public class BookAdapter2 extends RecyclerView.Adapter<BookAdapter2.SachViewHodlder> implements Filterable {
 
-    ImageView imageView;
-    Uri imageUri;
-    StorageReference storageReference;
-    ProgressDialog progressDialog;
-
     private Context mContext;
     private List<Sach> mSachList;
     private List<Sach> mSachListOld;
@@ -60,7 +55,6 @@ public class BookAdapter2 extends RecyclerView.Adapter<BookAdapter2.SachViewHodl
                             list.add(sach);
                         }
                     }
-
                     mSachList = list;
                 }
                 FilterResults filterResults = new FilterResults();
@@ -81,28 +75,11 @@ public class BookAdapter2 extends RecyclerView.Adapter<BookAdapter2.SachViewHodl
         void onClickDeleteItem(Sach book);
 
     }
-    public BookAdapter2(Context mContext) {
-        this.mContext = mContext;
-    }
-
-    public BookAdapter2(Context mContext, List<Sach> mSachList) {
-        this.mContext = mContext;
-        this.mSachList = mSachList;
-    }
-
-    public BookAdapter2(List<Sach> mSachList) {
-        this.mSachList = mSachList;
-        this.mSachListOld = mSachList;
-    }
-
-    public void setData(List<Sach>list){
-        this.mSachList = list;
-        notifyDataSetChanged();
-    }
 
     public BookAdapter2(List<Sach> mSachList, IClickListener mIClickListerner) {
         this.mSachList = mSachList;
         this.mIClickListerner = mIClickListerner;
+        this.mSachListOld = mSachList;
     }
 
     @NonNull

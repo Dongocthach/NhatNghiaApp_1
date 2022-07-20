@@ -1,19 +1,25 @@
 package com.example.nhatnghia_app.Fragment;
 
+import android.app.SearchManager;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.widget.SearchView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
+import androidx.appcompat.widget.SearchView;
 
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -42,7 +48,7 @@ public class Fm_bgroup_UpdateBook extends Fragment {
     private BookAdapter2 bookAdapter2;
 
     private Button btn1;
-    private EditText ed1;
+    private androidx.appcompat.widget.SearchView searchView;
     private List<Sach> mListBook;
 
     @Override
@@ -57,7 +63,6 @@ public class Fm_bgroup_UpdateBook extends Fragment {
         // Inflate the layout for this fragment
         View v= inflater.inflate(R.layout.fragment_fm_bgroup__update_book, container, false);
         btn1 = v.findViewById(R.id.book_btnsearch);
-        ed1 = v.findViewById(R.id.search_edit);
 
 
         recyclerView = v.findViewById(R.id.update_book_rcv);
@@ -77,6 +82,23 @@ public class Fm_bgroup_UpdateBook extends Fragment {
         recyclerView.addItemDecoration(dividerItemDecoration);
         recyclerView.setAdapter(bookAdapter2);
 
+        SearchManager searchManager = (SearchManager) this.getActivity().getSystemService(Context.SEARCH_SERVICE);
+        searchView = v.findViewById(R.id.search_view);
+        searchView.setSearchableInfo(searchManager.getSearchableInfo(this.getActivity().getComponentName()));
+        searchView.setMaxWidth(Integer.MAX_VALUE);
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                bookAdapter2.getFilter().filter(query);
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                bookAdapter2.getFilter().filter(newText);
+                return false;
+            }
+        });
         return v;
     }
     private void getListBookFromRealtimeDatabase(){
@@ -230,5 +252,6 @@ public class Fm_bgroup_UpdateBook extends Fragment {
                 .setNegativeButton("cancel", null)
                 .show();
     }
+
 
 }

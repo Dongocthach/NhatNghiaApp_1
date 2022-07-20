@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    xmlns:app="http://schemas.android.com/apk/res-auto"
 
     android:id="@+id/frameLayout3"
     tools:context=".Fragment.Fm_bgroup_UpdateBook">
@@ -18,41 +18,12 @@
             android:layout_height="wrap_content"
             android:layout_margin="6dp"
             android:orientation="horizontal">
-            <SearchView
+            <androidx.appcompat.widget.SearchView
                 android:id="@+id/search_view"
-               android:layout_width="0dp"
-                android:layout_weight="0.9"
+               android:layout_width="match_parent"
                 android:hint="tim kiem"
                 android:layout_height="wrap_content"/>
-            <Button
-                android:id="@+id/book_btnsearch"
-                android:layout_width="0dp"
-                android:layout_weight="0.1"
-                android:layout_height="30dp"
-                android:paddingTop="10dp"
-                android:layout_margin="6dp"
-                android:background="@drawable/kinhlup"
-                app:backgroundTint="@null"/>
-<!--                        </Button>-->
-            <!--            <Button-->
-<!--                android:id="@+id/book_btnsearch"-->
-<!--                android:layout_width="0dp"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_weight="0.4"-->
-<!--                android:text="search" />-->
-
-<!--                android:layout_width="390dp"-->
-<!--                android:hint="tim kiem"-->
-<!--                android:layout_height="wrap_content"/>-->
-
-<!--            <Button-->
-<!--                android:id="@+id/book_btnsearch"-->
-<!--                android:width="0dp"-->
-<!--                android:height="wrap_content"-->
-<!--                android:background="@drawable/kinhlup"-->
-<!--                app:backgroundTint="@null" />-->
         </LinearLayout>
-
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/update_book_rcv"

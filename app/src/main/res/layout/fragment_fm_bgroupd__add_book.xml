@@ -97,31 +97,7 @@
             android:layout_height="wrap_content"
             android:text="Clear"></Button>
 
-        <LinearLayout
-            android:layout_marginTop="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <EditText
-                android:id="@+id/book_ed6"
-                android:layout_width="395dp"
-                android:layout_height="40dp"
-
-                android:hint="tim kiem" />
-
-            <Button
-
-                android:layout_marginTop="-4dp"
-                android:id="@+id/book_btnsearch"
-                android:layout_width="40dp"
-                android:layout_height="30dp"
-                android:layout_marginLeft="-45dp"
-                android:background="@drawable/kinhlup"
-                app:backgroundTint="@null"
-                 />
-
-    </LinearLayout>
+       
     </LinearLayout>
 
 </FrameLayout>

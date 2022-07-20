@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#E4DCCF"
     tools:context=".MainActivity">
 
     <TextView
@@ -47,6 +48,8 @@
 
     <Button
         android:id="@+id/selectImagebtn"
+        android:background="@drawable/addbook"
+        app:backgroundTint="@null"
         android:layout_width="0dp"
         android:layout_height="70dp"
         android:layout_marginHorizontal="16dp"
@@ -57,6 +60,8 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
+        android:background="@drawable/addbook"
+        app:backgroundTint="@null"
         android:id="@+id/uploadimagebtn"
         android:layout_width="0dp"
         android:layout_height="70dp"

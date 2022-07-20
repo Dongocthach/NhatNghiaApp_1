@@ -3,10 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-<<<<<<< HEAD
-=======
+
     xmlns:app="http://schemas.android.com/apk/res-auto"
->>>>>>> hai
+
     android:id="@+id/frameLayout3"
     tools:context=".Fragment.Fm_bgroup_UpdateBook">
 
@@ -21,8 +20,7 @@
             android:orientation="horizontal">
             <EditText
                 android:id="@+id/search_edit"
-<<<<<<< HEAD
-                android:layout_width="0dp"
+               android:layout_width="0dp"
                 android:layout_weight="0.6"
                 android:hint="tim kiem"
                 android:layout_height="wrap_content"/>
@@ -32,7 +30,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.4"
                 android:text="search" />
-=======
+
                 android:layout_width="390dp"
                 android:hint="tim kiem"
                 android:layout_height="wrap_content"/>
@@ -44,8 +42,6 @@
                 android:layout_height="33dp"
                 android:background="@drawable/kinhlup"
                 app:backgroundTint="@null" />
->>>>>>> hai
-
         </LinearLayout>
 
 

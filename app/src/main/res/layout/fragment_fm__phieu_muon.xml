@@ -5,10 +5,41 @@
     android:layout_height="match_parent"
     tools:context=".Fragment.Fm_PhieuMuon">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
+        android:id="@+id/kc_relative_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        tools:context=".fragment.PhieuMuonFragment">
+
+        <androidx.appcompat.widget.SearchView
+            android:layout_margin="6dp"
+            android:id="@+id/phieumuon_searchview"
+            android:layout_width="match_parent"
+            android:hint="tim kiem"
+            android:layout_height="wrap_content"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycle_view_phieumuon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="44dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginBottom="6dp"
+            android:padding="6dp"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/pm_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="end|bottom"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="26dp"
+            android:layout_marginBottom="17dp"
+            android:src="@drawable/ic_add" />
+    </RelativeLayout>
 
 </FrameLayout>

@@ -75,6 +75,7 @@ public class BookAdapter2 extends RecyclerView.Adapter<BookAdapter2.SachViewHodl
         void onClickDeleteItem(Sach book);
         void onClickIncreaseQuantity(Sach book);
         void onClickDecreaseQuantity(Sach book);
+        void onClickMovetoListOnRent(Sach book);
 
     }
 
@@ -124,6 +125,12 @@ public class BookAdapter2 extends RecyclerView.Adapter<BookAdapter2.SachViewHodl
             @Override
             public void onClick(View view) {
                 mIClickListerner.onClickDecreaseQuantity(sach);
+            }
+        });
+        holder.btn5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mIClickListerner.onClickMovetoListOnRent(sach);
             }
         });
     }

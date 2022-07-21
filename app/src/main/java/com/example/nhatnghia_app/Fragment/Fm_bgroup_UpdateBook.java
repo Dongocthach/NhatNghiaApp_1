@@ -30,8 +30,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.nhatnghia_app.BookAdapter2;
+import com.example.nhatnghia_app.PhieuMuon;
 import com.example.nhatnghia_app.R;
 import com.example.nhatnghia_app.Sach;
+import com.example.nhatnghia_app.Sachs;
+import com.example.nhatnghia_app.ThanhVien;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.tabs.TabLayout;
@@ -66,8 +69,7 @@ public class Fm_bgroup_UpdateBook extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View v= inflater.inflate(R.layout.fragment_fm_bgroup__update_book, container, false);
-        
+        View v = inflater.inflate(R.layout.fragment_fm_bgroup__update_book, container, false);
 
 
         recyclerView = v.findViewById(R.id.update_book_rcv);
@@ -75,10 +77,14 @@ public class Fm_bgroup_UpdateBook extends Fragment {
         getListBookFromRealtimeDatabase();
         bookAdapter2 = new BookAdapter2(mListBook, new BookAdapter2.IClickListener() {
             @Override
-            public void onClickUpdateItem(Sach book) { openDialogUpdate(book); }
+            public void onClickUpdateItem(Sach book) {
+                openDialogUpdate(book);
+            }
 
             @Override
-            public void onClickDeleteItem(Sach book) {onClickDeleteData(book); }
+            public void onClickDeleteItem(Sach book) {
+                onClickDeleteData(book);
+            }
 
             @Override
             public void onClickIncreaseQuantity(Sach book) {
@@ -91,11 +97,17 @@ public class Fm_bgroup_UpdateBook extends Fragment {
                 onClickDeCreaseQuantity(book);
 
             }
+
+            @Override
+            public void onClickMovetoListOnRent(Sach book) {
+                onClickCreaseSachMuon(book);
+
+            }
         });
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(linearLayoutManager);
 
-        DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(getActivity(),DividerItemDecoration.VERTICAL);
+        DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(getActivity(), DividerItemDecoration.VERTICAL);
         recyclerView.addItemDecoration(dividerItemDecoration);
         recyclerView.setAdapter(bookAdapter2);
 
@@ -118,7 +130,8 @@ public class Fm_bgroup_UpdateBook extends Fragment {
         });
         return v;
     }
-    private void getListBookFromRealtimeDatabase(){
+
+    private void getListBookFromRealtimeDatabase() {
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference("Books");
 
@@ -126,7 +139,7 @@ public class Fm_bgroup_UpdateBook extends Fragment {
             @Override
             public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
                 Sach bk = snapshot.getValue(Sach.class);
-                if(bk != null){
+                if (bk != null) {
                     mListBook.add(bk);
                     bookAdapter2.notifyDataSetChanged();
                 }
@@ -136,12 +149,12 @@ public class Fm_bgroup_UpdateBook extends Fragment {
             @Override
             public void onChildChanged(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
                 Sach bk = snapshot.getValue(Sach.class);
-                if(mListBook == null || mListBook.isEmpty()){
+                if (mListBook == null || mListBook.isEmpty()) {
                     return;
                 }
-                for(int i = 0; i < mListBook.size();i++){
-                    if(bk.getID() == mListBook.get(i).getID()){
-                        mListBook.set(i,bk);
+                for (int i = 0; i < mListBook.size(); i++) {
+                    if (bk.getID() == mListBook.get(i).getID()) {
+                        mListBook.set(i, bk);
                         break;
                     }
                 }
@@ -151,11 +164,11 @@ public class Fm_bgroup_UpdateBook extends Fragment {
             @Override
             public void onChildRemoved(@NonNull DataSnapshot snapshot) {
                 Sach book = snapshot.getValue(Sach.class);
-                if(mListBook == null || mListBook.isEmpty()){
+                if (mListBook == null || mListBook.isEmpty()) {
                     return;
                 }
-                for(int i = 0; i < mListBook.size();i++){
-                    if(book.getID() == mListBook.get(i).getID()){
+                for (int i = 0; i < mListBook.size(); i++) {
+                    if (book.getID() == mListBook.get(i).getID()) {
                         mListBook.remove(mListBook.get(i));
                         break;
                     }
@@ -176,7 +189,8 @@ public class Fm_bgroup_UpdateBook extends Fragment {
         });
 
     }
-    private void openDialogUpdate(Sach bk){
+
+    private void openDialogUpdate(Sach bk) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
 
         LayoutInflater inflater = (getActivity()).getLayoutInflater();
@@ -186,11 +200,11 @@ public class Fm_bgroup_UpdateBook extends Fragment {
 //        alertDialog.getWindow().setBackgroundDrawableResource(R.drawable.dialog_add_bg);
         alertDialog.show();
 
-        Button dia_btn1,dia_btn2,dia_btn3;
+        Button dia_btn1, dia_btn2, dia_btn3;
         TextView dia_ed1;
-        EditText dia_ed2,dia_ed3,dia_ed4,dia_ed5;
+        EditText dia_ed2, dia_ed3, dia_ed4, dia_ed5;
         ImageView imageView;
-        imageView= vi.findViewById(R.id.image_dialog);
+        imageView = vi.findViewById(R.id.image_dialog);
         dia_ed1 = vi.findViewById(R.id.book_ed1);
         dia_ed2 = vi.findViewById(R.id.book_ed2);
         dia_ed3 = vi.findViewById(R.id.book_ed3);
@@ -201,7 +215,7 @@ public class Fm_bgroup_UpdateBook extends Fragment {
         dia_btn2 = vi.findViewById(R.id.return_btn);
         dia_btn3 = vi.findViewById(R.id.dialog_fetchimage_btn);
 
-        dia_ed1.setText("ID: "+bk.getID());
+        dia_ed1.setText("ID: " + bk.getID());
         dia_ed2.setText(bk.getTenSach());
         dia_ed3.setText(bk.getTenTacGia());
         dia_ed4.setText(bk.getTheLoai());
@@ -221,10 +235,10 @@ public class Fm_bgroup_UpdateBook extends Fragment {
                 bk.setTheLoai(newtheloai);
                 bk.setImgsach(newimglink);
 
-                myRef.child(String.valueOf(bk.getID())).updateChildren(bk.toMap(), new DatabaseReference.CompletionListener(){
+                myRef.child(String.valueOf(bk.getID())).updateChildren(bk.toMap(), new DatabaseReference.CompletionListener() {
                     @Override
                     public void onComplete(@Nullable DatabaseError error, @NonNull DatabaseReference ref) {
-                        Toast.makeText(getActivity(),"update success", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity(), "update success", Toast.LENGTH_SHORT).show();
 
                     }
                 });
@@ -241,13 +255,14 @@ public class Fm_bgroup_UpdateBook extends Fragment {
         dia_btn3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Fm_bgroup_ImageControl fm_bgroup_imageControl=new Fm_bgroup_ImageControl();
-                fm_bgroup_imageControl.onClickFetchImage(dia_ed5.getText().toString(),imageView);
+                Fm_bgroup_ImageControl fm_bgroup_imageControl = new Fm_bgroup_ImageControl();
+                fm_bgroup_imageControl.onClickFetchImage(dia_ed5.getText().toString(), imageView);
             }
         });
 
     }
-    private void onClickDeleteData(Sach book){
+
+    private void onClickDeleteData(Sach book) {
         new AlertDialog.Builder(getActivity())
                 .setTitle(getString(R.string.app_name))
                 .setMessage("chac chan xoa sach nay")
@@ -257,10 +272,10 @@ public class Fm_bgroup_UpdateBook extends Fragment {
                         FirebaseDatabase database = FirebaseDatabase.getInstance();
                         DatabaseReference myRef = database.getReference("Books");
 
-                        myRef.child(String.valueOf(book.getID())).removeValue(new DatabaseReference.CompletionListener()  {
+                        myRef.child(String.valueOf(book.getID())).removeValue(new DatabaseReference.CompletionListener() {
                             @Override
                             public void onComplete(@Nullable DatabaseError error, @NonNull DatabaseReference ref) {
-                                Toast.makeText(getActivity(),"delete success", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getActivity(), "delete success", Toast.LENGTH_SHORT).show();
                             }
                         });
 
@@ -269,9 +284,10 @@ public class Fm_bgroup_UpdateBook extends Fragment {
                 .setNegativeButton("cancel", null)
                 .show();
     }
-    private void onClickInCreaseQuantity(Sach book){
+
+    private void onClickInCreaseQuantity(Sach book) {
         DatabaseReference myRef = database.getReference("Books");
-        myRef.child(String.valueOf(book.getID())).child("quantity").setValue(book.getQuantity()+1) .addOnSuccessListener(new OnSuccessListener<Void>() {
+        myRef.child(String.valueOf(book.getID())).child("quantity").setValue(book.getQuantity() + 1).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void aVoid) {
                 // Write was successful!
@@ -281,15 +297,16 @@ public class Fm_bgroup_UpdateBook extends Fragment {
                 .addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(getActivity(),"loi"+e,Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity(), "loi" + e, Toast.LENGTH_SHORT).show();
                         // ...
                     }
                 });
 
     }
-    private void onClickDeCreaseQuantity(Sach book){
+
+    private void onClickDeCreaseQuantity(Sach book) {
         DatabaseReference myRef = database.getReference("Books");
-        myRef.child(String.valueOf(book.getID())).child("quantity").setValue(book.getQuantity()-1) .addOnSuccessListener(new OnSuccessListener<Void>() {
+        myRef.child(String.valueOf(book.getID())).child("quantity").setValue(book.getQuantity() - 1).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void aVoid) {
                 // Write was successful!
@@ -299,12 +316,25 @@ public class Fm_bgroup_UpdateBook extends Fragment {
                 .addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(getActivity(),"loi"+e,Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity(), "loi" + e, Toast.LENGTH_SHORT).show();
                         // ...
                     }
                 });
 
     }
 
+    private void onClickCreaseSachMuon(Sach book) {
+        DatabaseReference myRef = database.getReference("Bookss");
+        Sachs sachs = new Sachs(Integer.valueOf(book.getID()+1),"", "", new Sach(book.getTenSach(), book.getTheLoai(), book.getID(),book.getPrice(),book.getQuantity()),
+                new ThanhVien("645", "thach"),
+                new PhieuMuon("1"));
+        String pathObject = String.valueOf(book.getID()+1);
+        myRef.child(pathObject).setValue(sachs, new DatabaseReference.CompletionListener() {
+            @Override
+            public void onComplete(@Nullable DatabaseError error, @NonNull DatabaseReference ref) {
+                Toast.makeText(getActivity(), "add book success", Toast.LENGTH_SHORT).show();
+            }
+        });
 
+    }
 }

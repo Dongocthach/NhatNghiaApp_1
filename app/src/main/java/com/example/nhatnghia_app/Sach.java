@@ -23,6 +23,20 @@ public class Sach {
 
     }
 
+    public Sach(String tenSach, String theLoai, String ID) {
+        TenSach = tenSach;
+        TheLoai = theLoai;
+        this.ID = ID;
+    }
+
+    public Sach(String tenSach, String theLoai, String ID, int quantity, int price) {
+        TenSach = tenSach;
+        TheLoai = theLoai;
+        this.ID = ID;
+        this.quantity = quantity;
+        this.price = price;
+    }
+
     public Sach(String tenSach, String tenTacGia, String theLoai, String ID, String imgsach, int quantity, int price) {
         TenSach = tenSach;
         this.tenTacGia = tenTacGia;

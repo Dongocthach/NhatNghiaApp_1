@@ -234,7 +234,6 @@ public class Fm_bgroup_UpdateBook extends Fragment {
                 bk.setTenTacGia(newtacgia);
                 bk.setTheLoai(newtheloai);
                 bk.setImgsach(newimglink);
-
                 myRef.child(String.valueOf(bk.getID())).updateChildren(bk.toMap(), new DatabaseReference.CompletionListener() {
                     @Override
                     public void onComplete(@Nullable DatabaseError error, @NonNull DatabaseReference ref) {
@@ -304,7 +303,7 @@ public class Fm_bgroup_UpdateBook extends Fragment {
 
     }
 
-    private void onClickDeCreaseQuantity(Sach book) {
+    public void onClickDeCreaseQuantity(Sach book) {
         DatabaseReference myRef = database.getReference("Books");
         myRef.child(String.valueOf(book.getID())).child("quantity").setValue(book.getQuantity() - 1).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
@@ -325,7 +324,7 @@ public class Fm_bgroup_UpdateBook extends Fragment {
 
     private void onClickCreaseSachMuon(Sach book) {
         DatabaseReference myRef = database.getReference("Bookss");
-        Sachs sachs = new Sachs(Integer.valueOf(book.getID()+1),"", "", new Sach(book.getTenSach(), book.getTheLoai(), book.getID(),book.getPrice(),book.getQuantity()),
+        Sachs sachs = new Sachs(Integer.valueOf(book.getID()+1),"", "","", new Sach(book.getTenSach(), book.getTheLoai(), book.getID(),book.getPrice(),book.getQuantity()),
                 new ThanhVien("645", "thach"),
                 new PhieuMuon("1"));
         String pathObject = String.valueOf(book.getID()+1);

@@ -7,6 +7,7 @@ public class Sachs {
     private int id;
     private String ngaymuon;
     private String ngaytra;
+    private String thanhtien;
     private Sach sach;
     private ThanhVien thanhVien;
     private PhieuMuon phieuMuon;
@@ -14,10 +15,11 @@ public class Sachs {
     public Sachs() {
     }
 
-    public Sachs(int id, String ngaymuon, String ngaytra, Sach sach, ThanhVien thanhVien, PhieuMuon phieuMuon) {
+    public Sachs(int id, String ngaymuon, String ngaytra,String thanhtien, Sach sach, ThanhVien thanhVien, PhieuMuon phieuMuon) {
         this.id = id;
         this.ngaymuon = ngaymuon;
         this.ngaytra = ngaytra;
+        this.thanhtien = thanhtien;
         this.sach = sach;
         this.thanhVien = thanhVien;
         this.phieuMuon = phieuMuon;
@@ -71,12 +73,21 @@ public class Sachs {
         this.phieuMuon = phieuMuon;
     }
 
+    public String getThanhtien() {
+        return thanhtien;
+    }
+
+    public void setThanhtien(String thanhtien) {
+        this.thanhtien = thanhtien;
+    }
+
     public Map<String, Object> toMap(){
         HashMap<String, Object> result = new HashMap<>();
         result.put("id",id);
         result.put("ngaymuon",ngaymuon);
         result.put("ngaytra",ngaytra);
         result.put("sach",sach);
+        result.put("thanhtien",thanhtien);
         result.put("thanhVien",thanhVien);
         result.put("phieuMuon",phieuMuon);
         return result;

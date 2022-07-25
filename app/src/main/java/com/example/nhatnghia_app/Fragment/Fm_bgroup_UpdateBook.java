@@ -68,10 +68,7 @@ public class Fm_bgroup_UpdateBook extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_fm_bgroup__update_book, container, false);
-
-
         recyclerView = v.findViewById(R.id.update_book_rcv);
         mListBook = new ArrayList<>();
         getListBookFromRealtimeDatabase();

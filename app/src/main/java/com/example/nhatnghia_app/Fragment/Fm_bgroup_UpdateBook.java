@@ -86,13 +86,11 @@ public class Fm_bgroup_UpdateBook extends Fragment {
             @Override
             public void onClickIncreaseQuantity(Sach book) {
                 onClickInCreaseQuantity(book);
-
             }
 
             @Override
             public void onClickDecreaseQuantity(Sach book) {
                 onClickDeCreaseQuantity(book);
-
             }
 
             @Override

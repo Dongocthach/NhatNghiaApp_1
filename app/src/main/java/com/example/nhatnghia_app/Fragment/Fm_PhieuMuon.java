@@ -2,11 +2,14 @@ package com.example.nhatnghia_app.Fragment;
 
 import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
+import android.app.SearchManager;
+import android.content.Context;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.widget.SearchView;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -60,8 +63,12 @@ public class Fm_PhieuMuon extends Fragment {
     private RecyclerView recyclerView;
     private BooksAdapter1 booksAdapter1;
 
+    private androidx.appcompat.widget.SearchView searchView;
+
     private String day1;
     private String day2;
+
+
 
     private Fm_bgroup_UpdateBook fm_bgroup_updateBook = new Fm_bgroup_UpdateBook();
 
@@ -108,6 +115,24 @@ public class Fm_PhieuMuon extends Fragment {
             public void onClick(View view) {
                 dialogAddPm();
 
+            }
+        });
+
+        SearchManager searchManager = (SearchManager) this.getActivity().getSystemService(Context.SEARCH_SERVICE);
+        searchView = v.findViewById(R.id.phieumuon_searchview);
+        searchView.setSearchableInfo(searchManager.getSearchableInfo(this.getActivity().getComponentName()));
+        searchView.setMaxWidth(Integer.MAX_VALUE);
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                booksAdapter1.getFilter().filter(query);
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                booksAdapter1.getFilter().filter(newText);
+                return false;
             }
         });
 
@@ -190,9 +215,9 @@ public class Fm_PhieuMuon extends Fragment {
                         public void onDataChange(@NonNull DataSnapshot snapshot) {
                              Sach sach = snapshot.getValue(Sach.class);
                              Sachs sachs = new Sachs(Integer.valueOf(sach.getID()+1),currentDate, "","", new Sach(sach.getTenSach(), sach.getTheLoai(), sach.getID(), sach.getQuantity(), sach.getPrice()),
-                                    new ThanhVien("645", "thach"),
-                                    new PhieuMuon("1"));
-                            String pathObject = String.valueOf(sach.getID()+1);
+                                    new ThanhVien(str3, "thach"),
+                                    new PhieuMuon(str2));
+                            String pathObject = String.valueOf(sach.getID()+str2+str3);
                             myRef2.child(pathObject).setValue(sachs, new DatabaseReference.CompletionListener() {
                                 @Override
                                 public void onComplete(@Nullable DatabaseError error, @NonNull DatabaseReference ref) {

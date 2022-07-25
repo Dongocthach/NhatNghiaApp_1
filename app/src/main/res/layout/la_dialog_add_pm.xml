@@ -38,7 +38,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="6dp"
                 android:background="@drawable/edittextborder"
-                android:hint="ma thu thu"
+                android:hint="ma phieu muon"
                 android:textColor="@color/dialog_textcolor"
                 android:textColorHint="@color/dialog_textcolor"></EditText>
 

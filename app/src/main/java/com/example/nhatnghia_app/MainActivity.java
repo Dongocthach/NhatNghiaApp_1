@@ -9,6 +9,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
@@ -22,6 +23,7 @@ import com.example.nhatnghia_app.Fragment.Fm_QuanLySach;
 import com.example.nhatnghia_app.Fragment.Fm_QuanLyThanhVien;
 import com.example.nhatnghia_app.Fragment.Fm_TrangChinh;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -81,7 +83,10 @@ public class MainActivity extends AppCompatActivity{
                         break;
                     }
                     case R.id.mn7: {
-                        System.exit(0);
+                        FirebaseAuth.getInstance().signOut();
+                        Intent intent  = new Intent(MainActivity.this, SignInActivity.class);
+                        startActivity(intent);
+                        finish();
                         break;
                     }
                     case R.id.mn8: {

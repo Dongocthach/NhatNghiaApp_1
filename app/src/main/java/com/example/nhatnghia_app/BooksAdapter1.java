@@ -15,42 +15,42 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BooksAdapter1 extends RecyclerView.Adapter<BooksAdapter1.SachViewHodlder> {
+public class BooksAdapter1 extends RecyclerView.Adapter<BooksAdapter1.SachViewHodlder> implements Filterable{
 
     private Context mContext;
     private List<Sachs> mSachList;
     private List<Sachs> mSachListOld;
     private IClickListener mIClickListerner;
 
-//    @Override
-//    public Filter getFilter() {
-//        return new Filter() {
-//            @Override
-//            protected FilterResults performFiltering(CharSequence charSequence) {
-//                String strSearch = charSequence.toString();
-//                if (strSearch.isEmpty()) {
-//                    mSachList = mSachListOld;
-//                } else {
-//                    List<Sachs> list = new ArrayList<>();
-//                    for (Sachs sach : mSachListOld) {
-//                        if (sach.getPhieuMuon().getId().toLowerCase().contains(strSearch.toLowerCase())) {
-//                            list.add(sach);
-//                        }
-//                    }
-//                    mSachList = list;
-//                }
-//                FilterResults filterResults = new FilterResults();
-//                filterResults.values = mSachList;
-//                return filterResults;
-//            }
-//
-//            @Override
-//            protected void publishResults(CharSequence charSequence, FilterResults filterResults) {
-//                mSachList = (List<Sachs>) filterResults.values;
-//                notifyDataSetChanged();
-//            }
-//        };
-//    }
+    @Override
+    public Filter getFilter() {
+        return new Filter() {
+            @Override
+            protected FilterResults performFiltering(CharSequence charSequence) {
+                String strSearch = charSequence.toString();
+                if (strSearch.isEmpty()) {
+                    mSachList = mSachListOld;
+                } else {
+                    List<Sachs> list = new ArrayList<>();
+                    for (Sachs sach : mSachListOld) {
+                        if (sach.getPhieuMuon().getId().toLowerCase().contains(strSearch.toLowerCase())) {
+                            list.add(sach);
+                        }
+                    }
+                    mSachList = list;
+                }
+                FilterResults filterResults = new FilterResults();
+                filterResults.values = mSachList;
+                return filterResults;
+            }
+
+            @Override
+            protected void publishResults(CharSequence charSequence, FilterResults filterResults) {
+                mSachList = (List<Sachs>) filterResults.values;
+                notifyDataSetChanged();
+            }
+        };
+    }
 
 
     public BooksAdapter1(Context mContext) {
@@ -64,6 +64,7 @@ public class BooksAdapter1 extends RecyclerView.Adapter<BooksAdapter1.SachViewHo
 
 
     }
+
 
     public BooksAdapter1(List<Sachs> mSachList, IClickListener mIClickListerner) {
         this.mSachList = mSachList;

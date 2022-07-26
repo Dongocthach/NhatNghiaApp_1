@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     android:layout_gravity="center"
     android:orientation="vertical"
     tools:context=".SignInActivity">
@@ -35,8 +34,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Email:"
             android:layout_marginLeft="15dp"
+            android:text="Email:"
 
             android:textColor="@color/black"
             android:textSize="20dp"
@@ -46,10 +45,11 @@
             android:id="@+id/ed1"
             android:layout_width="389dp"
             android:layout_height="43dp"
-            android:layout_marginTop="10dp"
             android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
             android:backgroundTint="#E6CBCB"
             android:hint="\t\tNhập Email" />
+
         <LinearLayout
             android:layout_width="400dp"
             android:layout_height="wrap_content"
@@ -62,11 +62,12 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nhập mật khẩu: "
                 android:layout_marginLeft="15dp"
+                android:text="Nhập mật khẩu: "
                 android:textColor="@color/black"
                 android:textSize="20dp"
                 android:textStyle="bold" />
+
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -94,6 +95,7 @@
             android:textSize="40dp"
             android:textStyle="bold"
             app:backgroundTint="@null" />
+
         <Button
             android:id="@+id/btndangnhap"
             android:layout_width="163dp"
@@ -108,43 +110,42 @@
             android:id="@+id/tv1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Quên mật khẩu"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:textColor="#FB7B05"
             android:layout_marginTop="20dp"
-            android:textSize="20dp"/>
+            android:gravity="center"
+            android:text="Quên mật khẩu"
+            android:textColor="#FB7B05"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
         <LinearLayout
             android:layout_width="wrap_content"
-            android:orientation="vertical"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="50dp"
-            android:layout_height="wrap_content">
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Chưa có tài khoản,"
-                android:textSize="20dp"
                 android:textColor="#BEBEBE"
-                android:textStyle="bold"/>
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/tv2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textStyle="bold"
+                android:layout_marginLeft="170dp"
+                android:layout_marginTop="-25dp"
+                android:text="Đăng ký"
                 android:textColor="#FB7B05"
                 android:textSize="20dp"
-                android:text="Đăng ký"
-                android:layout_marginLeft="170dp"
-                android:layout_marginTop="-25dp"/>
+                android:textStyle="bold" />
         </LinearLayout>
 
 
-
-
     </LinearLayout>
-
 
 
     <!--    <EditText-->

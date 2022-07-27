@@ -11,23 +11,19 @@
             <item
                 android:id="@+id/mn1"
                 android:title="Trang Chính"
-                android:icon="@drawable/trangchu"
                 />
 
             <item
                 android:id="@+id/mn2"
                 android:title="Phiếu mượn"
-                android:icon="@drawable/phieumuon"
                 />
             <item
                 android:id="@+id/mn3"
                 android:title="Quản lý Sach"
-                android:icon="@drawable/ic_baseline_description_24"
                 />
             <item
                 android:id="@+id/mn4"
                 android:title="Quản lý thành viên"
-                android:icon="@drawable/thanhvien"
                 />
         </menu>
     </item>
@@ -39,13 +35,13 @@
         <menu>
             <item android:id="@+id/mn5"
                 android:title="Cập nhật tài khoản"
-                android:icon="@drawable/taikhoan"/>
+                android:icon="@color/black"/>
             <item android:id="@+id/mn6"
                 android:title="Đổi mật khẩu"
-                android:icon="@drawable/doimk" />
+                android:icon="@color/black"/>
             <item android:id="@+id/mn7"
                 android:title="Dang Xuat"
-                android:icon="@drawable/dangxuat"/>
+                android:icon="@color/black"/>
         </menu>
     </item>
     <item
@@ -55,10 +51,10 @@
         <menu>
             <item android:id="@+id/mn8"
                 android:title="Giới Thiệu"
-                android:icon="@drawable/gioithieu"/>
+                android:icon="@color/black"/>
             <item android:id="@+id/mn9"
                 android:title="DiaChi"
-                android:icon="@drawable/bando"/>
+                android:icon="@color/black"/>
 
         </menu>
     </item>

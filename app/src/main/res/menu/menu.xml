@@ -22,7 +22,7 @@
             <item
                 android:id="@+id/mn3"
                 android:title="Quản lý Sach"
-                android:icon="@drawable/sach"
+                android:icon="@drawable/quanlysach"
                 />
             <item
                 android:id="@+id/mn4"
@@ -55,10 +55,10 @@
         <menu>
             <item android:id="@+id/mn8"
                 android:title="Giới Thiệu"
-                android:icon="@color/black"/>
+                android:icon="@drawable/gioithieu"/>
             <item android:id="@+id/mn9"
                 android:title="DiaChi"
-                android:icon="@color/black"/>
+                android:icon="@drawable/bando"/>
 
         </menu>
     </item>

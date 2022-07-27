@@ -121,12 +121,22 @@ public class Fm_CapNhapTaiKhoan extends Fragment {
             return;
         }
         String strFullName = editText1.getText().toString().trim();
+        String newEmail = editText2.getText().toString().trim();
         UserProfileChangeRequest profileUpdates = new UserProfileChangeRequest.Builder()
                 .setDisplayName(strFullName)
                 .setPhotoUri(imageUri)
                 .build();
 
         user.updateProfile(profileUpdates)
+                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        if (task.isSuccessful()) {
+                            mmainActivity.showUserInformation();
+                        }
+                    }
+                });
+        user.updateEmail(newEmail)
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {

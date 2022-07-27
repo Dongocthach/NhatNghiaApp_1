@@ -4,17 +4,50 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
 import java.util.List;
 
-public class ThanhVienAdapter extends RecyclerView.Adapter<ThanhVienAdapter.ThanhVienViewHodlder>{
+public class ThanhVienAdapter extends RecyclerView.Adapter<ThanhVienAdapter.ThanhVienViewHodlder>implements Filterable {
     private List<ThanhVien> mThanhVienList;
     private List<ThanhVien> mThanhVienListOld;
     private ThanhVienAdapter.IClickListener mIClickListerner;
+
+    @Override
+    public Filter getFilter() {
+        return new Filter() {
+            @Override
+            protected FilterResults performFiltering(CharSequence charSequence) {
+                String strSearch = charSequence.toString();
+                if(strSearch.isEmpty()){
+                    mThanhVienList = mThanhVienListOld;
+                }else{
+                    List<ThanhVien> list = new ArrayList<>();
+                    for(ThanhVien thanhVien : mThanhVienListOld){
+                        if(thanhVien.getId().toLowerCase().contains(strSearch.toLowerCase())){
+                            list.add(thanhVien);
+                        }
+                    }
+                    mThanhVienList = list;
+                }
+                FilterResults filterResults = new FilterResults();
+                filterResults.values = mThanhVienList;
+                return filterResults;
+            }
+
+            @Override
+            protected void publishResults(CharSequence charSequence, FilterResults filterResults) {
+                mThanhVienList = (List<ThanhVien>) filterResults.values;
+                notifyDataSetChanged();
+            }
+        };
+    }
 
     public  interface  IClickListener{
         void onClickUpdateItemTV(ThanhVien tv);
@@ -25,6 +58,7 @@ public class ThanhVienAdapter extends RecyclerView.Adapter<ThanhVienAdapter.Than
     public ThanhVienAdapter(List<ThanhVien> mThanhVienList, IClickListener mIClickListerner) {
         this.mThanhVienList = mThanhVienList;
         this.mIClickListerner = mIClickListerner;
+        this.mThanhVienListOld = mThanhVienList;
     }
 
     @NonNull

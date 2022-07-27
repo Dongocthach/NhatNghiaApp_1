@@ -9,17 +9,42 @@ public class Sach {
     private String TheLoai;
     private String ID;
     private String imgsach;
-
+    private int quantity;
+    private int price;
     public Sach() {
     }
 
-    public Sach(String ID, String imgsach, String tenSach, String tenTacGia, String theLoai) {
+    public Sach(String ID, String imgsach, String tenSach, String tenTacGia, String TheLoai) {
         this.ID = ID;
         this.imgsach = imgsach;
         this.TenSach = tenSach;
         this.tenTacGia = tenTacGia;
-        this.TheLoai = theLoai;
+        this.TheLoai = TheLoai;
 
+    }
+
+    public Sach(String tenSach, String theLoai, String ID) {
+        TenSach = tenSach;
+        TheLoai = theLoai;
+        this.ID = ID;
+    }
+
+    public Sach(String tenSach, String theLoai, String ID, int quantity, int price) {
+        TenSach = tenSach;
+        TheLoai = theLoai;
+        this.ID = ID;
+        this.quantity = quantity;
+        this.price = price;
+    }
+
+    public Sach(String tenSach, String tenTacGia, String theLoai, String ID, String imgsach, int quantity, int price) {
+        TenSach = tenSach;
+        this.tenTacGia = tenTacGia;
+        TheLoai = theLoai;
+        this.ID = ID;
+        this.imgsach = imgsach;
+        this.quantity = quantity;
+        this.price = price;
     }
 
     public String getTenSach() {
@@ -42,8 +67,8 @@ public class Sach {
         return TheLoai;
     }
 
-    public void setTheLoai(String theLoai) {
-        TheLoai = theLoai;
+    public void setTheLoai(String TheLoai) {
+        this.TheLoai = TheLoai;
     }
 
     public String getID() {
@@ -61,12 +86,31 @@ public class Sach {
     public void setImgsach(String imgsach) {
         this.imgsach = imgsach;
     }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
     public Map<String, Object> toMap(){
         HashMap<String, Object> result = new HashMap<>();
         result.put("tenSach",TenSach);
         result.put("tenTacGia",tenTacGia);
         result.put("theLoai",TheLoai);
         result.put("imgsach",imgsach);
+        result.put("quantity",quantity);
+        result.put("price",price);
         return result;
     }
 

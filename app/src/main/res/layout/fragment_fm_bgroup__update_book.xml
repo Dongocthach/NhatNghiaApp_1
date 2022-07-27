@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/frameLayout3"
     tools:context=".Fragment.Fm_bgroup_UpdateBook">
 
@@ -16,22 +16,12 @@
             android:layout_height="wrap_content"
             android:layout_margin="6dp"
             android:orientation="horizontal">
-            <EditText
-                android:id="@+id/search_edit"
-                android:layout_width="390dp"
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/search_view"
+               android:layout_width="match_parent"
                 android:hint="tim kiem"
                 android:layout_height="wrap_content"/>
-
-            <Button
-                android:id="@+id/book_btnsearch"
-                android:layout_marginLeft="-40dp"
-                android:layout_width="36dp"
-                android:layout_height="33dp"
-                android:background="@drawable/kinhlup"
-                app:backgroundTint="@null" />
-
         </LinearLayout>
-
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/update_book_rcv"

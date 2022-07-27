@@ -8,4 +8,12 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="text_color">#313131</color>
+    <color name="gray">#D3D3D3</color>
+    <color name="fab_bg">#233A64</color>
+    <color name="button_bg">#FFF502</color>
+    <color name="dialog_textcolor">#F0DFD5</color>
+    <color name="transparent">#80FFFFFF</color>
+    <color name="admin_tool_bar">#A7A8BD</color>
+    <color name="green">#50D050</color>
+    <color name="red">#EA1313</color>
 </resources>

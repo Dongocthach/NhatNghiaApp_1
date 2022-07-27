@@ -51,6 +51,8 @@ public class Fm_TrangChinh extends Fragment {
         DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(getActivity(), DividerItemDecoration.VERTICAL);
         recyclerView.addItemDecoration(dividerItemDecoration);
         mlist = new ArrayList<>();
+//        mlist.add(new Sach("1","narutotap5","naruto","mashamoto","anime"));
+//        mlist.add(new Sach("2","narutotap5","naruto","mashamoto","anime"));
         getListBookFromRealtimeDatabase();
         mbookAdapter = new BookAdapter1(getActivity(),mlist);
         recyclerView.setAdapter(mbookAdapter);

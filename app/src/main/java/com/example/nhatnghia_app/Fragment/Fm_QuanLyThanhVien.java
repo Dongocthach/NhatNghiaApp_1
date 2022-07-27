@@ -3,6 +3,7 @@ package com.example.nhatnghia_app.Fragment;
 import android.app.SearchManager;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -312,5 +313,6 @@ public class Fm_QuanLyThanhVien extends Fragment {
         });
 
     }
+
 
 }

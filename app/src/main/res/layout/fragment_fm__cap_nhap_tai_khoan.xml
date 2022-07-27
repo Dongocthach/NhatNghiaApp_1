@@ -5,10 +5,31 @@
     android:layout_height="match_parent"
     tools:context=".Fragment.Fm_CapNhapTaiKhoan">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:orientation="vertical">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_img"
+            android:layout_width="match_parent"
+            android:layout_height="260dp"
+            android:src="@drawable/adminicon"/>
+        <EditText
+            android:id="@+id/profile_fullname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint=" Ho va ten"/>
+        <EditText
+            android:id="@+id/profile_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="email"/>
+        <Button
+            android:id="@+id/profile_btn1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="cap nhap"/>
+
+    </LinearLayout>
 
 </FrameLayout>

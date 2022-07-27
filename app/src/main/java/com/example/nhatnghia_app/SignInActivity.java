@@ -18,9 +18,9 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class SignInActivity extends AppCompatActivity {
-    private EditText ed1,ed2;
-    private TextView tv1,tv2;
-    private Button btn1,btn2;
+    EditText ed1,ed2;
+    TextView tv1,tv2;
+    Button btn1;
     private ProgressDialog progressDialog;
 
     @Override
@@ -38,18 +38,11 @@ public class SignInActivity extends AppCompatActivity {
         progressDialog = new ProgressDialog(SignInActivity.this);
         ed1 = findViewById(R.id.ed1);
         ed2 = findViewById(R.id.ed2);
-        tv1 =findViewById(R.id.tv1);
         tv2= findViewById(R.id.tv2);
-        btn1 = findViewById(R.id.login_btn1);
-        btn2 = findViewById(R.id.login_btn2);
+        btn1 = findViewById(R.id.btn1);
     }
     private  void initListener()
-    {   tv1.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View view) {
-            onClickForgotPassword();
-        }
-    });
+    {
         tv2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -64,34 +57,6 @@ public class SignInActivity extends AppCompatActivity {
                 onClickSignIn();
             }
         });
-        btn2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(SignInActivity.this, SignUpActivity.class);
-                startActivity(intent);
-            }
-        });
-    }
-
-    private void onClickForgotPassword() {
-        progressDialog.show();
-        FirebaseAuth auth = FirebaseAuth.getInstance();
-        String emailAddress = ed1.getText().toString().trim();
-
-        auth.sendPasswordResetEmail(emailAddress)
-                .addOnCompleteListener(new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task) {
-                        if (task.isSuccessful()) {
-                            Toast.makeText(SignInActivity.this,"email sent!", Toast.LENGTH_SHORT).show();
-
-                        }else {
-                            Toast.makeText(SignInActivity.this,"email sent failed!", Toast.LENGTH_SHORT).show();
-
-                        }
-                        progressDialog.dismiss();
-                    }
-                });
     }
 
     private void onClickSignIn() {
@@ -111,7 +76,7 @@ public class SignInActivity extends AppCompatActivity {
                             finishAffinity();
                         } else {
                             // If sign in fails, display a message to the user.
-                            Toast.makeText(SignInActivity.this, "Wrong user name or password!",
+                            Toast.makeText(SignInActivity.this, "Authentication failed.",
                                     Toast.LENGTH_SHORT).show();
 
                         }

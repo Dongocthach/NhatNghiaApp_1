@@ -6,8 +6,7 @@
     android:background="#E4DCCF"
     android:orientation="vertical">
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/img_avatar"
+    <ImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginLeft="-140dp"

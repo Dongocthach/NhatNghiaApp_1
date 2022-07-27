@@ -84,49 +84,27 @@
 
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="12dp"
-            android:orientation="horizontal"
-            android:gravity="center"
-            >
-            <Button
-                android:id="@+id/login_btn1"
-                android:layout_width="160dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:background="@drawable/button"
-                android:textSize="16sp"
-                android:layout_margin="6dp"
-                android:text="login"
-                android:textStyle="bold"
-                app:backgroundTint="@null" />
-            <Button
-                android:id="@+id/login_btn2"
-                android:layout_width="160dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="6dp"
 
-                android:layout_gravity="center"
-                android:background="@drawable/button"
-                android:textSize="16sp"
-                android:text="Register"
-                android:textStyle="bold"
-                app:backgroundTint="@null" />
+        <Button
+            android:id="@+id/btn1"
+            android:layout_width="170dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button"
+            android:textSize="40dp"
+            android:textStyle="bold"
+            app:backgroundTint="@null" />
 
-        </LinearLayout>
-
-
-<!--        <Button-->
-<!--            android:id="@+id/btndangnhap"-->
-<!--            android:layout_width="163dp"-->
-<!--            android:layout_height="70dp"-->
-<!--            android:layout_marginLeft="125dp"-->
-<!--            android:layout_marginTop="-69dp"-->
-<!--            android:background="@drawable/ic_baseline_arrow_forward_24"-->
-<!--            android:backgroundTint="@color/white"-->
-<!--            app:backgroundTint="@null" />-->
+        <Button
+            android:id="@+id/btndangnhap"
+            android:layout_width="163dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="125dp"
+            android:layout_marginTop="-69dp"
+            android:background="@drawable/ic_baseline_arrow_forward_24"
+            android:backgroundTint="@color/white"
+            app:backgroundTint="@null" />
 
         <TextView
             android:id="@+id/tv1"

@@ -20,7 +20,7 @@ import com.google.firebase.auth.FirebaseAuth;
 public class SignInActivity extends AppCompatActivity {
     private EditText ed1,ed2;
     private TextView tv1,tv2;
-    private Button btn1;
+    private Button btn1,btn2;
     private ProgressDialog progressDialog;
 
     @Override
@@ -40,6 +40,7 @@ public class SignInActivity extends AppCompatActivity {
         ed2 = findViewById(R.id.ed2);
         tv2= findViewById(R.id.tv2);
         btn1 = findViewById(R.id.login_btn1);
+        btn2 = findViewById(R.id.login_btn2);
     }
     private  void initListener()
     {
@@ -55,6 +56,13 @@ public class SignInActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 onClickSignIn();
+            }
+        });
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(SignInActivity.this, SignUpActivity.class);
+                startActivity(intent);
             }
         });
     }

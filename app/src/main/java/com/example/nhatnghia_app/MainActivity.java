@@ -55,27 +55,7 @@ public class MainActivity extends AppCompatActivity{
     private ImageView imgAvatar;
     private TextView tvname,tvemail;
 
-    private final Fm_CapNhapTaiKhoan myProfileFragment = new Fm_CapNhapTaiKhoan();
-    private final ActivityResultLauncher<Intent> mActivityResultLauncher = registerForActivityResult(
-            new ActivityResultContracts.StartActivityForResult(), new ActivityResultCallback<ActivityResult>() {
-        @Override
-        public void onActivityResult(ActivityResult result) {
-            if(result.getResultCode() == RESULT_OK){
-                Intent intent = result.getData();
-                if(intent == null){
-                    return;
-                }
-                Uri uri = intent.getData();
-                Log.i("123", String.valueOf(uri));
-                try {
-                    Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), uri);
-                    myProfileFragment.setBitmapImageView(bitmap);
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-    });
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -211,7 +191,6 @@ public class MainActivity extends AppCompatActivity{
         Intent intent = new Intent();
         intent.setType("image/*");
         intent.setAction(Intent.ACTION_GET_CONTENT);
-        mActivityResultLauncher.launch(Intent.createChooser(intent,"Select picture"));
 
     };
 }

@@ -84,18 +84,39 @@
 
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
-
-        <Button
-            android:id="@+id/login_btn1"
-            android:layout_width="170dp"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/button"
-            android:textSize="16sp"
-            android:text="login"
-            android:textStyle="bold"
-            app:backgroundTint="@null" />
+            android:layout_margin="12dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            >
+            <Button
+                android:id="@+id/login_btn1"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/button"
+                android:textSize="16sp"
+                android:layout_margin="6dp"
+                android:text="login"
+                android:textStyle="bold"
+                app:backgroundTint="@null" />
+            <Button
+                android:id="@+id/login_btn2"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+
+                android:layout_gravity="center"
+                android:background="@drawable/button"
+                android:textSize="16sp"
+                android:text="Register"
+                android:textStyle="bold"
+                app:backgroundTint="@null" />
+
+        </LinearLayout>
+
 
 <!--        <Button-->
 <!--            android:id="@+id/btndangnhap"-->

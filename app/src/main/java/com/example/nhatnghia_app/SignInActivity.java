@@ -18,9 +18,9 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class SignInActivity extends AppCompatActivity {
-    EditText ed1,ed2;
-    TextView tv1,tv2;
-    Button btn1;
+    private EditText ed1,ed2;
+    private TextView tv1,tv2;
+    private Button btn1;
     private ProgressDialog progressDialog;
 
     @Override
@@ -39,7 +39,7 @@ public class SignInActivity extends AppCompatActivity {
         ed1 = findViewById(R.id.ed1);
         ed2 = findViewById(R.id.ed2);
         tv2= findViewById(R.id.tv2);
-        btn1 = findViewById(R.id.btn1);
+        btn1 = findViewById(R.id.login_btn1);
     }
     private  void initListener()
     {
@@ -76,7 +76,7 @@ public class SignInActivity extends AppCompatActivity {
                             finishAffinity();
                         } else {
                             // If sign in fails, display a message to the user.
-                            Toast.makeText(SignInActivity.this, "Authentication failed.",
+                            Toast.makeText(SignInActivity.this, "Wrong user name or password!",
                                     Toast.LENGTH_SHORT).show();
 
                         }

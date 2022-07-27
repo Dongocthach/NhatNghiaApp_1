@@ -1,11 +1,14 @@
 package com.example.nhatnghia_app.Fragment;
 
+import android.app.SearchManager;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.widget.SearchView;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -25,10 +28,13 @@ import com.example.nhatnghia_app.Sach;
 import com.example.nhatnghia_app.ThanhVien;
 import com.example.nhatnghia_app.ThanhVienAdapter;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.firebase.database.ChildEventListener;
+import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -56,6 +62,8 @@ public class Fm_QuanLyThanhVien extends Fragment {
         View v= inflater.inflate(R.layout.fragment_fm__quan_ly_thanh_vien, container, false);
 
         recyclerView = v.findViewById(R.id.recycle_view_thanhvien);
+        mListThanhVien = new ArrayList<>();
+        getListBookFromRealtimeDatabase();
         thanhVienAdapter = new ThanhVienAdapter(mListThanhVien, new ThanhVienAdapter.IClickListener() {
             @Override
             public void onClickUpdateItemTV(ThanhVien tv) {
@@ -81,6 +89,24 @@ public class Fm_QuanLyThanhVien extends Fragment {
             @Override
             public void onClick(View view) {
                 onClickAddThanhVien();
+            }
+        });
+
+        SearchManager searchManager = (SearchManager) this.getActivity().getSystemService(Context.SEARCH_SERVICE);
+        searchView = v.findViewById(R.id.thanhvien_searchview);
+        searchView.setSearchableInfo(searchManager.getSearchableInfo(this.getActivity().getComponentName()));
+        searchView.setMaxWidth(Integer.MAX_VALUE);
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                thanhVienAdapter.getFilter().filter(query);
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                thanhVienAdapter.getFilter().filter(newText);
+                return false;
             }
         });
         return v;
@@ -228,6 +254,63 @@ public class Fm_QuanLyThanhVien extends Fragment {
                 })
                 .setNegativeButton("cancel", null)
                 .show();
+    }
+    private void getListBookFromRealtimeDatabase() {
+        DatabaseReference myRef = database.getReference("MemBers");
+
+        myRef.addChildEventListener(new ChildEventListener() {
+            @Override
+            public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
+                ThanhVien tv = snapshot.getValue(ThanhVien.class);
+                if (tv != null) {
+                    mListThanhVien.add(tv);
+                    thanhVienAdapter.notifyDataSetChanged();
+                }
+
+            }
+
+            @Override
+            public void onChildChanged(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
+                ThanhVien tv = snapshot.getValue(ThanhVien.class);
+                if (mListThanhVien == null || mListThanhVien.isEmpty()) {
+                    return;
+                }
+                for (int i = 0; i < mListThanhVien.size(); i++) {
+                    if (tv.getId() == mListThanhVien.get(i).getId()) {
+                        mListThanhVien.set(i, tv);
+                        break;
+                    }
+                }
+                thanhVienAdapter.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onChildRemoved(@NonNull DataSnapshot snapshot) {
+                ThanhVien tv = snapshot.getValue(ThanhVien.class);
+                if (mListThanhVien == null || mListThanhVien.isEmpty()) {
+                    return;
+                }
+                for (int i = 0; i < mListThanhVien.size(); i++) {
+                    if (tv.getId() == mListThanhVien.get(i).getId()) {
+                        mListThanhVien.remove(mListThanhVien.get(i));
+                        break;
+                    }
+                }
+                thanhVienAdapter.notifyDataSetChanged();
+
+            }
+
+            @Override
+            public void onChildMoved(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
     }
 
 }

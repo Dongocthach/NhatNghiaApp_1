@@ -42,11 +42,13 @@ public class MainActivity extends AppCompatActivity{
         toolbar= findViewById(R.id.toolbar);
         drawerLayout= findViewById(R.id.drawerLayout);
         navigationView = findViewById(R.id.navigationView);
+        navigationView.setItemIconTintList(null);
 
         setSupportActionBar(toolbar);
         ActionBar actionBar = getSupportActionBar();
         actionBar.setHomeAsUpIndicator(R.drawable.ic_baseline_menu_open_24);
         actionBar.setDisplayHomeAsUpEnabled(true);
+
 
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction().replace(R.id.frameLayout,new Fm_TrangChinh()).commit();

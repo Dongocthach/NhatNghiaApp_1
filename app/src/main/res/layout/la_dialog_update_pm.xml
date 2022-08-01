@@ -51,6 +51,10 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+<<<<<<< Updated upstream
+=======
+        android:layout_gravity="center"
+>>>>>>> Stashed changes
         android:orientation="horizontal">
 
         <Button
@@ -64,12 +68,25 @@
 
         <Button
             android:id="@+id/dialog_update_pm_2"
+<<<<<<< Updated upstream
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="6dp"
             android:layout_weight="0.5"
             android:background="@color/button_bg"
             android:text="Cancel"></Button>
+=======
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:backgroundTint="#7D9D9C"
+            android:drawableLeft="@drawable/ic_baseline_save_24"
+            android:text="Cancel"
+            android:textColor="#ffff"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+>>>>>>> Stashed changes
     </LinearLayout>
 
 

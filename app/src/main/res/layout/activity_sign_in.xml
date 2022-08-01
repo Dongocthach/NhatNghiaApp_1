@@ -18,45 +18,62 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="20dp"
+<<<<<<< Updated upstream
 
+=======
+        android:id="@+id/lldangnhap"
+>>>>>>> Stashed changes
         android:background="@drawable/csstomtron"
         android:orientation="vertical">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/starstrp"
             android:gravity="center"
             android:text="Đăng nhập"
             android:textColor="@color/black"
             android:textSize="50dp"
             android:textStyle="bold" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:text="Email:"
-
-            android:textColor="@color/black"
-            android:textSize="20dp"
-            android:textStyle="bold" />
-
-        <EditText
-            android:id="@+id/ed1"
-            android:layout_width="389dp"
-            android:layout_height="43dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:backgroundTint="#E6CBCB"
-            android:hint="\t\tNhập Email" />
 
         <LinearLayout
             android:layout_width="400dp"
             android:layout_height="wrap_content"
-
             android:layout_marginTop="5dp"
+            android:orientation="horizontal">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="Nhập Email: "
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold" />
 
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="-120dp"
+                android:layout_marginTop="55dp"
+                android:hint="Email"
+
+                app:startIconDrawable="@drawable/ic_baseline_email_24">
+
+            <EditText
+                android:id="@+id/ed1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
             android:orientation="horizontal">
 
             <TextView
@@ -69,17 +86,20 @@
                 android:textStyle="bold" />
 
             <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="-150dp"
                 android:layout_marginTop="55dp"
+                android:hint="password"
+
+                app:startIconDrawable="@drawable/ic_baseline_vpn_key_24"
                 app:passwordToggleEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/ed2"
-                    android:layout_width="387dp"
-                    android:layout_height="50dp"
-                    android:hint="password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:inputType="textPassword" />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -102,18 +122,7 @@
                 android:text="login"
                 android:textStyle="bold"
                 app:backgroundTint="@null" />
-            <Button
-                android:id="@+id/login_btn2"
-                android:layout_width="160dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="6dp"
 
-                android:layout_gravity="center"
-                android:background="@drawable/button"
-                android:textSize="16sp"
-                android:text="Register"
-                android:textStyle="bold"
-                app:backgroundTint="@null" />
 
         </LinearLayout>
 
@@ -132,7 +141,6 @@
             android:id="@+id/tv1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
             android:gravity="center"
             android:text="Quên mật khẩu"
             android:textColor="#FB7B05"
@@ -143,7 +151,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="20dp"
             android:orientation="vertical">
 
             <TextView

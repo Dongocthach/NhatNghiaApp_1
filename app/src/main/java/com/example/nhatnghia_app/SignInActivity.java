@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
@@ -22,6 +23,9 @@ public class SignInActivity extends AppCompatActivity {
     private TextView tv1,tv2;
     private Button btn1,btn2;
     private ProgressDialog progressDialog;
+    private LinearLayout lldangnhap;
+//    private AwesomeValidation validation;
+
 
 //    private AwesomeValidation validation;
 
@@ -51,6 +55,10 @@ public class SignInActivity extends AppCompatActivity {
         lldangnhap = findViewById(R.id.lldangnhap);
 //
 >>>>>>> Stashed changes
+//        btn2 = findViewById(R.id.login_btn2);
+//        btn2 = findViewById(R.id.login_btn2);
+        lldangnhap = findViewById(R.id.lldangnhap);
+//
     }
     private  void initListener()
     {   tv1.setOnClickListener(new View.OnClickListener() {

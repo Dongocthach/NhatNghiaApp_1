@@ -13,9 +13,10 @@ public class Sachs {
     private PhieuMuon phieuMuon;
 
     public Sachs() {
+
     }
 
-    public Sachs(int id, String ngaymuon, String ngaytra,String thanhtien, Sach sach, ThanhVien thanhVien, PhieuMuon phieuMuon) {
+    public Sachs(int id, String ngaymuon, String ngaytra, String thanhtien, Sach sach, ThanhVien thanhVien, PhieuMuon phieuMuon) {
         this.id = id;
         this.ngaymuon = ngaymuon;
         this.ngaytra = ngaytra;
@@ -49,6 +50,14 @@ public class Sachs {
         this.ngaytra = ngaytra;
     }
 
+    public String getThanhtien() {
+        return thanhtien;
+    }
+
+    public void setThanhtien(String thanhtien) {
+        this.thanhtien = thanhtien;
+    }
+
     public Sach getSach() {
         return sach;
     }
@@ -71,14 +80,6 @@ public class Sachs {
 
     public void setPhieuMuon(PhieuMuon phieuMuon) {
         this.phieuMuon = phieuMuon;
-    }
-
-    public String getThanhtien() {
-        return thanhtien;
-    }
-
-    public void setThanhtien(String thanhtien) {
-        this.thanhtien = thanhtien;
     }
 
     public Map<String, Object> toMap(){

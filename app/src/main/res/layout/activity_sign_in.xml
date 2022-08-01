@@ -23,6 +23,7 @@
 =======
         android:id="@+id/lldangnhap"
 >>>>>>> Stashed changes
+        android:id="@+id/lldangnhap"
         android:background="@drawable/csstomtron"
         android:orientation="vertical">
 

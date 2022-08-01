@@ -55,6 +55,7 @@
 =======
         android:layout_gravity="center"
 >>>>>>> Stashed changes
+        android:layout_gravity="center"
         android:orientation="horizontal">
 
         <Button

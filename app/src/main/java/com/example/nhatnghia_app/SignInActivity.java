@@ -48,15 +48,7 @@ public class SignInActivity extends AppCompatActivity {
         tv1 =findViewById(R.id.tv1);
         tv2= findViewById(R.id.tv2);
         btn1 = findViewById(R.id.login_btn1);
-<<<<<<< Updated upstream
-        btn2 = findViewById(R.id.login_btn2);
-=======
-//        btn2 = findViewById(R.id.login_btn2);
-        lldangnhap = findViewById(R.id.lldangnhap);
-//
->>>>>>> Stashed changes
-//        btn2 = findViewById(R.id.login_btn2);
-//        btn2 = findViewById(R.id.login_btn2);
+
         lldangnhap = findViewById(R.id.lldangnhap);
 //
     }

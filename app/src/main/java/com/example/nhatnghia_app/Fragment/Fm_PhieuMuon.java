@@ -214,10 +214,10 @@ public class Fm_PhieuMuon extends Fragment {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot snapshot) {
                              Sach sach = snapshot.getValue(Sach.class);
-                             Sachs sachs = new Sachs(Integer.valueOf(sach.getID()+1),currentDate, "","", new Sach(sach.getTenSach(), sach.getTheLoai(), sach.getID(), sach.getQuantity(), sach.getPrice()),
+                             Sachs sachs = new Sachs(Integer.valueOf(sach.getID()),currentDate, "","", new Sach(sach.getTenSach(), sach.getTheLoai(), sach.getID(), sach.getQuantity(), sach.getPrice()),
                                     new ThanhVien(str3, "thach"),
                                     new PhieuMuon(str2));
-                            String pathObject = String.valueOf(sach.getID()+str2+str3);
+                            String pathObject = String.valueOf(sach.getID());
                             myRef2.child(pathObject).setValue(sachs, new DatabaseReference.CompletionListener() {
                                 @Override
                                 public void onComplete(@Nullable DatabaseError error, @NonNull DatabaseReference ref) {

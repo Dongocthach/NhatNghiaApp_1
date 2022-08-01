@@ -8,7 +8,6 @@
         android:layout_width="match_parent"
         android:orientation="horizontal"
         android:layout_height="wrap_content">
-
         <Button
             android:id="@+id/dialog_update_pm_ngaytra"
             android:layout_width="0dp"
@@ -17,6 +16,7 @@
             android:backgroundTintMode="src_atop"
             android:backgroundTint="@color/black"
             android:background="@drawable/ic_baseline_calendar_month_24" />
+
         <LinearLayout
             android:layout_width="0dp"
             android:layout_weight="0.8"
@@ -31,6 +31,7 @@
                 android:textColor="@color/dialog_textcolor"
                 android:textSize="18sp"
                 android:text="Hien Thi Ngay tra"/>
+
             <TextView
                 android:id="@+id/dialog_update_pm_tv1"
                 android:padding="12dp"
@@ -40,6 +41,7 @@
                 android:textSize="18sp"
                 android:textColor="@color/dialog_textcolor"
                 android:text="Hien Thi Ngay tra"/>
+
     </LinearLayout>
     </LinearLayout>
 
@@ -55,6 +57,7 @@
         android:layout_width="305dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="50dp"
+
         android:orientation="horizontal">
 
         <Button
@@ -81,6 +84,7 @@
             android:textSize="20dp"
             android:textStyle="bold" />
         android:text="Cancel"/>
+
     </LinearLayout>
 
 

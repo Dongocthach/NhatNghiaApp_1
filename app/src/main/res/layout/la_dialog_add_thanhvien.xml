@@ -23,6 +23,7 @@
             android:textColor="@color/dialog_textcolor"
             android:textSize="23sp"/>
 
+
         <EditText
             android:id="@+id/dialog_thanhvien_ed1"
             android:layout_width="match_parent"
@@ -32,6 +33,7 @@
             android:hint="ID"
             android:textColor="@color/dialog_textcolor"
             android:textColorHint="@color/dialog_textcolor"/>
+
 
         <EditText
             android:id="@+id/dialog_thanhvien_ed2"
@@ -43,6 +45,7 @@
             android:textColor="@color/dialog_textcolor"
             android:textColorHint="@color/dialog_textcolor"/>
 
+
         <EditText
             android:id="@+id/dialog_thanhvien_ed3"
             android:layout_width="match_parent"
@@ -52,6 +55,7 @@
             android:hint="Ngay Sinh"
             android:textColor="@color/dialog_textcolor"
             android:textColorHint="@color/dialog_textcolor"/>
+
         <EditText
             android:id="@+id/dialog_thanhvien_ed4"
             android:layout_width="match_parent"
@@ -62,14 +66,14 @@
             android:textColor="@color/dialog_textcolor"
             android:textColorHint="@color/dialog_textcolor"/>
 
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="12dp"
             android:padding="20dp"
             android:orientation="horizontal"
-            android:gravity="center"
-            >
+            android:gravity="center">
 
             <Button
                 android:id="@+id/dialog_thanhvien_btn1"
@@ -92,6 +96,7 @@
                 android:background="@drawable/button"
                 app:backgroundTint="@null"
                 android:text="Cancel"/>
+
         </LinearLayout>
     </LinearLayout>
 

@@ -1,6 +1,8 @@
 package com.example.nhatnghia_app;
 
 import android.content.Context;
+
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,6 +23,37 @@ public class BooksAdapter1 extends RecyclerView.Adapter<BooksAdapter1.SachViewHo
     private List<Sachs> mSachList;
     private List<Sachs> mSachListOld;
     private IClickListener mIClickListerner;
+
+
+
+    public BooksAdapter1() {
+    }
+
+    public BooksAdapter1(Context mContext, List<Sachs> mSachList, List<Sachs> mSachListOld, IClickListener mIClickListerner) {
+        this.mContext = mContext;
+        this.mSachList = mSachList;
+        this.mSachListOld = mSachListOld;
+        this.mIClickListerner = mIClickListerner;
+    }
+
+    public BooksAdapter1(Context mContext) {
+        this.mContext = mContext;
+    }
+
+    public interface IClickListener {
+        void onClickUpdateItemSachs(Sachs book);
+
+        void onClickDeleteItemSachs(Sachs book);
+
+
+    }
+
+
+    public BooksAdapter1(List<Sachs> mSachList, IClickListener mIClickListerner) {
+        this.mSachList = mSachList;
+        this.mIClickListerner = mIClickListerner;
+        this.mSachListOld = mSachList;
+    }
 
     @Override
     public Filter getFilter() {
@@ -73,6 +106,7 @@ public class BooksAdapter1 extends RecyclerView.Adapter<BooksAdapter1.SachViewHo
     }
 
 
+
     @NonNull
     @Override
     public SachViewHodlder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -94,17 +128,32 @@ public class BooksAdapter1 extends RecyclerView.Adapter<BooksAdapter1.SachViewHo
         holder.tv5.setText(sach.getNgaytra());
         holder.tv7.setText(sach.getThanhtien());
 
+        Sachs sachs = mSachList.get(position);
+        if (sachs == null) {
+            return;
+        }
+//        Log.i("1234",sachs.getPhieuMuon().getId().toString());
+
+        holder.tv1.setText(sachs.getPhieuMuon().getId());
+        holder.tv2.setText(sachs.getThanhVien().getHoten());
+        holder.tv3.setText(sachs.getSach().getTenSach());
+        holder.tv4.setText(sachs.getNgaymuon());
+        holder.tv5.setText(sachs.getNgaytra());
+        holder.tv7.setText(sachs.getThanhtien());
+
         holder.btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mIClickListerner.onClickUpdateItemSachs(sach);
+
+                mIClickListerner.onClickUpdateItemSachs(sachs);
 
             }
         });
         holder.btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mIClickListerner.onClickDeleteItemSachs(sach);
+
+                mIClickListerner.onClickDeleteItemSachs(sachs);
 
             }
         });

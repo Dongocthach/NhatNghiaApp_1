@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Sach {
-    private  String TenSach;
+    private String TenSach;
     private String tenTacGia;
     private String TheLoai;
     private String ID;

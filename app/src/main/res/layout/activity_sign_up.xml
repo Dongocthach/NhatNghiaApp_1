@@ -24,7 +24,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="20dp"
-
         android:background="@drawable/csstomtron"
         android:orientation="vertical">
 
@@ -42,11 +41,9 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:text="Email:"
-
             android:textColor="@color/black"
             android:textSize="20dp"
             android:textStyle="bold" />
-
     <EditText
         android:id="@+id/SU_ed1"
         android:layout_width="match_parent"
@@ -58,10 +55,7 @@
         <LinearLayout
             android:layout_width="400dp"
             android:layout_height="wrap_content"
-
             android:layout_marginTop="5dp"
-
-
             android:orientation="horizontal">
 
             <TextView
@@ -99,7 +93,9 @@
             android:text="Register"
             android:textStyle="bold"
             app:backgroundTint="@null" />
+    </LinearLayout>
 
 
-</LinearLayout>
+
+
 </LinearLayout>

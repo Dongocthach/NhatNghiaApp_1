@@ -8,7 +8,6 @@
         android:layout_width="match_parent"
         android:orientation="horizontal"
         android:layout_height="wrap_content">
-
         <Button
             android:id="@+id/dialog_update_pm_ngaytra"
             android:layout_width="0dp"
@@ -17,6 +16,7 @@
             android:backgroundTintMode="src_atop"
             android:backgroundTint="@color/black"
             android:background="@drawable/ic_baseline_calendar_month_24" />
+
         <LinearLayout
             android:layout_width="0dp"
             android:layout_weight="0.8"
@@ -31,6 +31,7 @@
                 android:textColor="@color/dialog_textcolor"
                 android:textSize="18sp"
                 android:text="Hien Thi Ngay tra"/>
+
             <TextView
                 android:id="@+id/dialog_update_pm_tv1"
                 android:padding="12dp"
@@ -40,7 +41,8 @@
                 android:textSize="18sp"
                 android:textColor="@color/dialog_textcolor"
                 android:text="Hien Thi Ngay tra"/>
-    </LinearLayout>
+
+        </LinearLayout>
     </LinearLayout>
 
     <Spinner
@@ -58,9 +60,12 @@
         android:orientation="horizontal">
 
         <Button
+            android:layout_margin="6dp"
             android:id="@+id/dialog_update_pm_1"
-            android:layout_width="132dp"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
             android:layout_height="wrap_content"
+<<<<<<< HEAD
             android:layout_marginRight="20dp"
             android:backgroundTint="#7D9D9C"
             android:drawableLeft="@drawable/ic_baseline_save_24"
@@ -74,6 +79,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="20dp"
+=======
+>>>>>>> bde23194e61ded7d089e338a0a73c6cbe688187e
             android:backgroundTint="#7D9D9C"
             android:drawableLeft="@drawable/ic_baseline_save_24"
             android:text="Cancel"
@@ -81,7 +88,22 @@
             android:textSize="20dp"
             android:textStyle="bold" />
 
+<<<<<<< HEAD
+=======
+        <Button
+            android:layout_margin="6dp"
+            android:id="@+id/dialog_update_pm_2"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#7D9D9C"
+            android:drawableLeft="@drawable/ic_baseline_save_24"
+            android:text="cancel"
+            android:textColor="#ffff"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+>>>>>>> bde23194e61ded7d089e338a0a73c6cbe688187e
     </LinearLayout>
-
-
 </LinearLayout>
+

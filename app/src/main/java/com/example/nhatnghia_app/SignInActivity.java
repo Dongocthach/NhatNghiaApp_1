@@ -25,7 +25,6 @@ public class SignInActivity extends AppCompatActivity {
     private ProgressDialog progressDialog;
     private LinearLayout lldangnhap;
 
-//    private AwesomeValidation validation;
 
 
     @Override
@@ -48,7 +47,7 @@ public class SignInActivity extends AppCompatActivity {
         btn1 = findViewById(R.id.login_btn1);
 //        btn2 = findViewById(R.id.login_btn2);
         lldangnhap = findViewById(R.id.lldangnhap);
-//
+
     }
     private  void initListener()
     {   tv1.setOnClickListener(new View.OnClickListener() {

@@ -1,6 +1,7 @@
 package com.example.nhatnghia_app;
 
 import android.content.Context;
+
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,6 +23,7 @@ public class BooksAdapter1 extends RecyclerView.Adapter<BooksAdapter1.SachViewHo
     private List<Sachs> mSachList;
     private List<Sachs> mSachListOld;
     private IClickListener mIClickListerner;
+
 
 
     public BooksAdapter1() {
@@ -84,6 +86,24 @@ public class BooksAdapter1 extends RecyclerView.Adapter<BooksAdapter1.SachViewHo
     }
 
 
+    public BooksAdapter1(Context mContext) {
+        this.mContext = mContext;
+    }
+
+    public interface IClickListener {
+        void onClickUpdateItemSachs(Sachs book);
+
+        void onClickDeleteItemSachs(Sachs book);
+
+
+    }
+
+
+    public BooksAdapter1(List<Sachs> mSachList, IClickListener mIClickListerner) {
+        this.mSachList = mSachList;
+        this.mIClickListerner = mIClickListerner;
+        this.mSachListOld = mSachList;
+    }
 
 
 
@@ -96,6 +116,18 @@ public class BooksAdapter1 extends RecyclerView.Adapter<BooksAdapter1.SachViewHo
 
     @Override
     public void onBindViewHolder(@NonNull SachViewHodlder holder, int position) {
+        Sachs sach = mSachList.get(position);
+        if (sach == null) {
+            return;
+        }
+
+        holder.tv1.setText(sach.getPhieuMuon().getId());
+        holder.tv2.setText(sach.getThanhVien().getHoten());
+        holder.tv3.setText(sach.getSach().getTenSach());
+        holder.tv4.setText(sach.getNgaymuon());
+        holder.tv5.setText(sach.getNgaytra());
+        holder.tv7.setText(sach.getThanhtien());
+
         Sachs sachs = mSachList.get(position);
         if (sachs == null) {
             return;
@@ -112,6 +144,7 @@ public class BooksAdapter1 extends RecyclerView.Adapter<BooksAdapter1.SachViewHo
         holder.btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 mIClickListerner.onClickUpdateItemSachs(sachs);
 
             }
@@ -119,6 +152,7 @@ public class BooksAdapter1 extends RecyclerView.Adapter<BooksAdapter1.SachViewHo
         holder.btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 mIClickListerner.onClickDeleteItemSachs(sachs);
 
             }

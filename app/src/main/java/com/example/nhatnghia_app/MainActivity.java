@@ -65,6 +65,7 @@ public class MainActivity extends AppCompatActivity{
         toolbar= findViewById(R.id.toolbar);
         drawerLayout= findViewById(R.id.drawerLayout);
         navigationView = findViewById(R.id.navigationView);
+        navigationView.setItemIconTintList(null);
 
         setSupportActionBar(toolbar);
         ActionBar actionBar = getSupportActionBar();

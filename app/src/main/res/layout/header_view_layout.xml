@@ -8,9 +8,10 @@
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/img_avatar"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginLeft="-140dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginRight="120dp"
+
         android:src="@drawable/adminicon" />
 
     <TextView
@@ -22,6 +23,7 @@
         android:textSize="20sp"
         android:textStyle="bold"/>
     <TextView
+
         android:id="@+id/txtgamil"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

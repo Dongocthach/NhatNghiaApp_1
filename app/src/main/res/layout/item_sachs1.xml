@@ -1,27 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical">
+
+
     <TextView
         android:id="@+id/isachs_tv1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="id phieumuon"/>
+        android:hint="id phieumuon" />
+
     <TextView
         android:id="@+id/isachs_tv2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="ten nguoi muon"/>
+        android:hint="ten nguoi muon" />
+
     <TextView
         android:id="@+id/isachs_tv3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="tensachmuon"/>
+        android:hint="tensachmuon" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+        <TextView
+            android:id="@+id/isachs_tv4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:hint="ngay muon" />
+
+        <TextView
+            android:id="@+id/isachs_tv5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:hint="ngay tra" />
+
         <TextView
             android:id="@+id/isachs_tv4"
             android:layout_width="0dp"
@@ -40,6 +60,52 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+
+            android:id="@+id/isachs_tv6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:hint="ten thu thu" />
+
+        <TextView
+            android:id="@+id/isachs_tv7"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:hint="so tien can tra" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:padding="20dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
+
+        <Button
+            android:id="@+id/isachs_btn1"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+
+            android:layout_gravity="center"
+            android:background="@drawable/button"
+            android:text="cap nhap"
+            app:backgroundTint="@null" />
+
+        <Button
+            android:id="@+id/isachs_btn2"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+
+            android:layout_gravity="center"
+            android:background="@drawable/button"
+            android:text="xoa"
+            app:backgroundTint="@null" />
+
         <TextView
             android:id="@+id/isachs_tv6"
             android:layout_width="0dp"

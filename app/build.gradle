@@ -55,4 +55,8 @@ dependencies {
     def lottieVersion = "4.2.0"
     implementation "com.airbnb.android:lottie:$lottieVersion"
 
+
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.17'
+
+
 }

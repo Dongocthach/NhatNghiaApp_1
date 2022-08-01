@@ -84,13 +84,7 @@ public class Sachs {
         this.phieuMuon = phieuMuon;
     }
 
-    public String getThanhtien() {
-        return thanhtien;
-    }
 
-    public void setThanhtien(String thanhtien) {
-        this.thanhtien = thanhtien;
-    }
 
     public Map<String, Object> toMap(){
         HashMap<String, Object> result = new HashMap<>();

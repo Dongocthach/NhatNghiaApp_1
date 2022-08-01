@@ -56,22 +56,27 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_gravity="center">
         <Button
+            android:layout_margin="6dp"
             android:id="@+id/dialog_update_pm_1"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
             android:layout_height="wrap_content"
             android:backgroundTint="#7D9D9C"
             android:drawableLeft="@drawable/ic_baseline_save_24"
-            android:text="Ok"
+            android:text="Save"
             android:textColor="#ffff"
             android:textSize="20dp"
             android:textStyle="bold" />
 
         <Button
+            android:layout_margin="6dp"
+
             android:id="@+id/dialog_update_pm_2"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
             android:layout_height="wrap_content"
             android:backgroundTint="#7D9D9C"
             android:drawableLeft="@drawable/ic_baseline_save_24"
@@ -79,5 +84,7 @@
             android:textColor="#ffff"
             android:textSize="20dp"
             android:textStyle="bold" />
+
     </LinearLayout>
 </LinearLayout>
+

@@ -42,7 +42,7 @@
                 android:textColor="@color/dialog_textcolor"
                 android:text="Hien Thi Ngay tra"/>
 
-    </LinearLayout>
+        </LinearLayout>
     </LinearLayout>
 
     <Spinner
@@ -54,17 +54,14 @@
         android:layout_height="wrap_content" />
 
     <LinearLayout
-        android:layout_width="305dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="50dp"
-
+        android:layout_gravity="center"
         android:orientation="horizontal">
-
         <Button
             android:id="@+id/dialog_update_pm_1"
-            android:layout_width="132dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="20dp"
             android:backgroundTint="#7D9D9C"
             android:drawableLeft="@drawable/ic_baseline_save_24"
             android:text="Ok"
@@ -74,18 +71,13 @@
 
         <Button
             android:id="@+id/dialog_update_pm_2"
-            android:layout_width="146dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="20dp"
             android:backgroundTint="#7D9D9C"
             android:drawableLeft="@drawable/ic_baseline_save_24"
-            android:text="Save"
+            android:text="cancel"
             android:textColor="#ffff"
             android:textSize="20dp"
             android:textStyle="bold" />
-        android:text="Cancel"/>
-
     </LinearLayout>
-
-
 </LinearLayout>

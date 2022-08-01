@@ -20,11 +20,6 @@
             android:layout_marginTop="10dp"
             android:src="@drawable/adminicon"/>
         <EditText
-            android:textStyle="bold"
-            android:textColor="@color/black"
-            android:layout_marginTop="10dp"
-            android:src="@drawable/adminicon"/>
-        <EditText
 
             android:id="@+id/profile_fullname"
             android:layout_width="match_parent"
@@ -51,11 +46,7 @@
             android:textSize="16sp"
             app:backgroundTint="@null" />
 
-        <Button
-            android:id="@+id/profile_btn1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="cap nhap"/>
+
 
     </LinearLayout>
 

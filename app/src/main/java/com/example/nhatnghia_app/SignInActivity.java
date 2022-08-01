@@ -9,14 +9,14 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+
+import java.util.regex.Pattern;
 
 public class SignInActivity extends AppCompatActivity {
     private EditText ed1,ed2;
@@ -24,6 +24,9 @@ public class SignInActivity extends AppCompatActivity {
     private Button btn1,btn2;
     private ProgressDialog progressDialog;
     private LinearLayout lldangnhap;
+
+//    private AwesomeValidation validation;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,8 +46,9 @@ public class SignInActivity extends AppCompatActivity {
         tv1 =findViewById(R.id.tv1);
         tv2= findViewById(R.id.tv2);
         btn1 = findViewById(R.id.login_btn1);
-        btn2 = findViewById(R.id.login_btn2);
+//        btn2 = findViewById(R.id.login_btn2);
         lldangnhap = findViewById(R.id.lldangnhap);
+//
     }
     private  void initListener()
     {   tv1.setOnClickListener(new View.OnClickListener() {
@@ -67,13 +71,13 @@ public class SignInActivity extends AppCompatActivity {
                 onClickSignIn();
             }
         });
-        btn2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(SignInActivity.this, SignUpActivity.class);
-                startActivity(intent);
-            }
-        });
+//        btn2.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(SignInActivity.this, SignUpActivity.class);
+//                startActivity(intent);
+//            }
+//        });
     }
 
     private void onClickForgotPassword() {
@@ -107,6 +111,8 @@ public class SignInActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         progressDialog.dismiss();
+                        String tentaikhoan = ed1.getText().toString();
+                        String matkhau = ed2.getText().toString();
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
                             Intent intent = new Intent(SignInActivity.this, MainActivity.class);
@@ -116,10 +122,14 @@ public class SignInActivity extends AppCompatActivity {
                             // If sign in fails, display a message to the user.
                             Toast.makeText(SignInActivity.this, "Wrong user name or password!",
                                     Toast.LENGTH_SHORT).show();
+                            ed1.setError("Email khong chinh xác");
+
+                            ed2.setError("Mật không chính xác");
 
                         }
                     }
                 });
+}
 
     }
-}
+

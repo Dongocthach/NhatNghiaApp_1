@@ -52,9 +52,9 @@
         android:layout_height="wrap_content" />
 
     <LinearLayout
-        android:layout_width="305dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="50dp"
+        android:layout_gravity="center"
         android:orientation="horizontal">
 
         <Button
@@ -71,16 +71,16 @@
 
         <Button
             android:id="@+id/dialog_update_pm_2"
-            android:layout_width="146dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="20dp"
             android:backgroundTint="#7D9D9C"
             android:drawableLeft="@drawable/ic_baseline_save_24"
-            android:text="Save"
+            android:text="Cancel"
             android:textColor="#ffff"
             android:textSize="20dp"
             android:textStyle="bold" />
-        android:text="Cancel"/>
+
     </LinearLayout>
 
 

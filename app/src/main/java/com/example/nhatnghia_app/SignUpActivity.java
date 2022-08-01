@@ -4,8 +4,12 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -21,7 +25,8 @@ public class SignUpActivity extends AppCompatActivity {
     private EditText edEmail, edtPassword;
     private Button btnSignUp;
     private ProgressDialog progressDialog;
-
+    private LinearLayout llsingup;
+    private ImageView imgsingup;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +36,11 @@ public class SignUpActivity extends AppCompatActivity {
         initListerner();
 
 
+        Animation animation = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.slideshow);
+        llsingup.startAnimation(animation);
+        Animation animation1 = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.slideshow1);
+        imgsingup.startAnimation(animation1);
+
 
     }
 
@@ -38,6 +48,8 @@ public class SignUpActivity extends AppCompatActivity {
         edEmail = findViewById(R.id.SU_ed1);
         edtPassword = findViewById(R.id.SU_ed2);
         btnSignUp = findViewById(R.id.SU_btn1);
+        llsingup = findViewById(R.id.llsingup);
+        imgsingup = findViewById(R.id.imgsingup);
         progressDialog = new ProgressDialog(this);
     }
 

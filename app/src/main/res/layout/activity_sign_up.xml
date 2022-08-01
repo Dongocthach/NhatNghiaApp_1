@@ -7,13 +7,9 @@
     android:gravity="center"
     android:orientation="vertical"
     tools:context=".SignUpActivity">
-<!--    <pl.droidsonroids.gif.GifImageView-->
-<!--        android:layout_width="100dp"-->
-<!--        android:layout_height="100dp"-->
-<!--        android:layout_marginRight="10dp"-->
-<!--        android:src="@drawable/dangky" />-->
 
     <ImageView
+        android:id="@+id/imgsingup"
         android:layout_width="wrap_content"
         android:layout_height="212dp"
         android:layout_gravity="center"
@@ -21,10 +17,10 @@
         android:background="@drawable/logoa" />
 
     <LinearLayout
+        android:id="@+id/llsingup"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="20dp"
-
         android:background="@drawable/csstomtron"
         android:orientation="vertical">
 
@@ -36,32 +32,46 @@
             android:textColor="@color/black"
             android:textSize="50dp"
             android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:text="Email:"
-
-            android:textColor="@color/black"
-            android:textSize="20dp"
-            android:textStyle="bold" />
-
-    <EditText
-        android:id="@+id/SU_ed1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textEmailAddress"
-        android:textColor="@color/black"
-        android:maxLength="60"
-        android:hint="Email"/>
         <LinearLayout
             android:layout_width="400dp"
             android:layout_height="wrap_content"
-
             android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="Nhập Email: "
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="-120dp"
+                android:layout_marginTop="55dp"
+                android:hint="Email"
+
+                app:startIconDrawable="@drawable/ic_baseline_email_24">
+            <EditText
+                android:id="@+id/SU_ed1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/black"
+                android:maxLength="60"
+                android:hint="Email"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
 
 
+        <LinearLayout
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
             android:orientation="horizontal">
 
             <TextView
@@ -73,33 +83,37 @@
                 android:textSize="20dp"
                 android:textStyle="bold" />
             <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="-150dp"
                 android:layout_marginTop="55dp"
+                android:hint="password"
+                app:startIconDrawable="@drawable/ic_baseline_vpn_key_24"
                 app:passwordToggleEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/SU_ed2"
-                    android:layout_width="387dp"
-                    android:layout_height="50dp"
-                    android:hint="password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:inputType="textPassword" />
 
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
+
         <Button
             android:id="@+id/SU_btn1"
             android:layout_width="160dp"
             android:layout_height="wrap_content"
-            android:layout_margin="6dp"
             android:layout_gravity="center"
+            android:layout_margin="30dp"
+            android:layout_marginTop="150dp"
             android:background="@drawable/button"
-            android:textSize="16sp"
             android:text="Register"
+            android:textSize="16sp"
             android:textStyle="bold"
             app:backgroundTint="@null" />
 
 
-</LinearLayout>
+    </LinearLayout>
 </LinearLayout>

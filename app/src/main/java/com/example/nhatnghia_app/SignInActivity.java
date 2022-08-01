@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
@@ -22,7 +23,7 @@ public class SignInActivity extends AppCompatActivity {
     private TextView tv1,tv2;
     private Button btn1,btn2;
     private ProgressDialog progressDialog;
-
+    private LinearLayout lldangnhap;
 //    private AwesomeValidation validation;
 
 
@@ -44,7 +45,7 @@ public class SignInActivity extends AppCompatActivity {
         tv1 =findViewById(R.id.tv1);
         tv2= findViewById(R.id.tv2);
         btn1 = findViewById(R.id.login_btn1);
-        btn2 = findViewById(R.id.login_btn2);
+//        btn2 = findViewById(R.id.login_btn2);
 //        btn2 = findViewById(R.id.login_btn2);
         lldangnhap = findViewById(R.id.lldangnhap);
 //

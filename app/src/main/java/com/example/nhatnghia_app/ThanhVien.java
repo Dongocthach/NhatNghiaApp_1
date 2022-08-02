@@ -30,6 +30,8 @@ public class ThanhVien {
         this.ngaysinh = ngaysinh;
     }
 
+
+
     public String getId() {
         return Id;
     }

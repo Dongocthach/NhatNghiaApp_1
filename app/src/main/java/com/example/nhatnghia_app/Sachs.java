@@ -15,7 +15,11 @@ public class Sachs {
     public Sachs() {
     }
 
-    public Sachs(int id, String ngaymuon, String ngaytra,String thanhtien, Sach sach, ThanhVien thanhVien, PhieuMuon phieuMuon) {
+    public Sachs(ThanhVien thanhVien) {
+        this.thanhVien = thanhVien;
+    }
+
+    public Sachs(int id, String ngaymuon, String ngaytra, String thanhtien, Sach sach, ThanhVien thanhVien, PhieuMuon phieuMuon) {
         this.id = id;
         this.ngaymuon = ngaymuon;
         this.ngaytra = ngaytra;

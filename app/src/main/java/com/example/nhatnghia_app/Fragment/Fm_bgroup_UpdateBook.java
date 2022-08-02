@@ -279,7 +279,7 @@ public class Fm_bgroup_UpdateBook extends Fragment {
                 .show();
     }
 
-    private void onClickInCreaseQuantity(Sach book) {
+    public void onClickInCreaseQuantity(Sach book) {
         DatabaseReference myRef = database.getReference("Books");
         myRef.child(String.valueOf(book.getID())).child("quantity").setValue(book.getQuantity() + 1).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override

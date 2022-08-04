@@ -38,11 +38,14 @@ import com.example.nhatnghia_app.ThanhVien;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 import java.text.SimpleDateFormat;
@@ -74,12 +77,8 @@ public class Fm_PhieuMuon extends Fragment {
     private DatabaseReference myRef2 = database.getReference("Bookss");
     private DatabaseReference myRef3 = database.getReference("MemBers");
 
-    int maxid =0;
-
-
 
     private Fm_bgroup_UpdateBook fm_bgroup_updateBook = new Fm_bgroup_UpdateBook();
-
 
 
     @Override
@@ -99,19 +98,6 @@ public class Fm_PhieuMuon extends Fragment {
         for (int i = 1; i < 4; i++) {
             SetMatt3.add(i);
         }
-        myRef2.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                if(snapshot.exists()){
-                    maxid = (int)(snapshot.getChildrenCount());
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });
         mListBooks= new ArrayList<>();
         getListBookFromRealtimeDatabase();
         booksAdapter1 = new BooksAdapter1(mListBooks, new BooksAdapter1.IClickListener() {
@@ -166,13 +152,14 @@ public class Fm_PhieuMuon extends Fragment {
 
     private void getListBookFromRealtimeDatabase() {
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        myRef2.addChildEventListener(new ChildEventListener() {
+        Query query = myRef2.orderByKey();
+        query.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
                 Log.d("TAG", "onChildAdded:" + snapshot.getKey());
                 Sachs bk = snapshot.getValue(Sachs.class);
                 if (bk != null) {
-                    mListBooks.add(bk);
+                    mListBooks.add(0,bk);
                     booksAdapter1.notifyDataSetChanged();
                 }
 
@@ -276,33 +263,38 @@ public class Fm_PhieuMuon extends Fragment {
                     }
                 }
 
-                if(str3.isEmpty()){
-                    editText3.setError("chua dien");
-                    return;
-                }else{
-                    value3 = Integer.valueOf(str3);
-                    if(SetMatt3.contains(value3)){
-                        check =true;
-
-                    }else{
-                        err = "thanh vien";
-                        check=false;
-                    }
-                }
+//                if(str3.isEmpty()){
+//                    editText3.setError("chua dien");
+//                    return;
+//                }else{
+//
+//                    if(SetMatt3.contains(value3)){
+//                        check =true;
+//
+//                    }else{
+//                        err = "thanh vien";
+//                        check=false;
+//                    }
+//                }
 
                 if(check ==true){
+                    FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                     final boolean[] alreadyExecuted = {false};
                     final boolean[] alreadyExecuted2 = {false};
                     myRef1.child(str1).addValueEventListener(new ValueEventListener() {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                            int id = (int) (new Date().getTime()/1000);
+                            System.out.println("Integer : " + id);
+                            System.out.println("Int Date : " + new Date(((long)id)*1000L));
                             Sach sach = snapshot.getValue(Sach.class);
                             if(!alreadyExecuted[0]) {
-                                Sachs sachs = new Sachs(maxid,currentDate, "","", new Sach(sach.getTenSach(), sach.getTheLoai(), sach.getID(), 1, sach.getPrice()),
-                                        new ThanhVien(str3, "thach"),
-                                        new PhieuMuon(str2));
-//                                String pathObject = String.valueOf(sachs.getId());
-                                myRef2.child(String.valueOf(maxid)).setValue(sachs, new DatabaseReference.CompletionListener() {
+                                Sachs sachs = new Sachs(id+sach.getQuantity(),currentDate, "","", new Sach(sach.getTenSach(), sach.getTheLoai(), sach.getID(), 1, sach.getPrice()),
+                                        new ThanhVien(str3),
+                                        new PhieuMuon(str2,user.getEmail()));
+                                String pathObject = String.valueOf(sachs.getId());
+                                myRef2.child(pathObject).setValue(sachs, new DatabaseReference.CompletionListener() {
                                     @Override
                                     public void onComplete(@Nullable DatabaseError error, @NonNull DatabaseReference ref) {
                                         if(!alreadyExecuted2[0]) {
@@ -350,15 +342,16 @@ public class Fm_PhieuMuon extends Fragment {
                 .setPositiveButton("ok", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        FirebaseDatabase database = FirebaseDatabase.getInstance();
-                        DatabaseReference myRef = database.getReference("Bookss");
-
-                        myRef.child(String.valueOf(book.getId())).removeValue(new DatabaseReference.CompletionListener() {
-                            @Override
-                            public void onComplete(@Nullable DatabaseError error, @NonNull DatabaseReference ref) {
-                                Toast.makeText(getActivity(), "delete success", Toast.LENGTH_SHORT).show();
-                            }
-                        });
+//                        FirebaseDatabase database = FirebaseDatabase.getInstance();
+//                        DatabaseReference myRef = database.getReference("Bookss");
+//
+//                        myRef.child(String.valueOf(book.getId())).removeValue(new DatabaseReference.CompletionListener() {
+//                            @Override
+//                            public void onComplete(@Nullable DatabaseError error, @NonNull DatabaseReference ref) {
+//                                Toast.makeText(getActivity(), "delete success", Toast.LENGTH_SHORT).show();
+//                            }
+//                        });
+                        Toast.makeText(getActivity(),"tam thoi chua duoc xoa",Toast.LENGTH_SHORT).show();
 
                     }
                 })

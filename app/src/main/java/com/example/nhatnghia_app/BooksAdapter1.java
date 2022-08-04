@@ -91,6 +91,7 @@ public class BooksAdapter1 extends RecyclerView.Adapter<BooksAdapter1.SachViewHo
         holder.tv2.setText(sach.getThanhVien().getHoten());
         holder.tv3.setText(sach.getSach().getTenSach());
         holder.tv4.setText(sach.getNgaymuon());
+        holder.tv6.setText(sach.getPhieuMuon().getTenquantrivien());
         holder.tv5.setText(sach.getNgaytra());
         holder.tv7.setText(sach.getThanhtien());
 

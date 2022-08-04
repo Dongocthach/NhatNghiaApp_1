@@ -9,6 +9,10 @@ public class ThanhVien {
     private String ngaysinh;
     private String sdt;
 
+    public ThanhVien(String hoten) {
+        Hoten = hoten;
+    }
+
     public ThanhVien() {
     }
 

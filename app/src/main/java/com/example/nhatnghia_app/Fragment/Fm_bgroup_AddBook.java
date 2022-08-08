@@ -69,8 +69,6 @@ public class Fm_bgroup_AddBook extends Fragment implements AdapterView.OnItemSel
         spinner.setAdapter(dataAdapter);
 
 
-
-
         btn1 = view.findViewById(R.id.btn_pushdata);
         btn2 = view.findViewById(R.id.btn_clear);
         btn3 = view.findViewById(R.id.btn_fetchImage);

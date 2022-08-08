@@ -219,7 +219,7 @@ public class Fm_PhieuMuon extends Fragment {
         alertDialog.show();
         Button btn1,btn2;
         EditText editText1 = v.findViewById(R.id.dialog_phieumuon_ed1);
-        EditText editText2 = v.findViewById(R.id.dialog_phieumuon_ed2);
+//        EditText editText2 = v.findViewById(R.id.dialog_phieumuon_ed2);
         EditText editText3 = v.findViewById(R.id.dialog_phieumuon_ed3);
         btn1 = v.findViewById(R.id.dialog_add_pm_btn1);
         btn2 = v.findViewById(R.id.dialog_add_pm_btn2);
@@ -229,7 +229,7 @@ public class Fm_PhieuMuon extends Fragment {
             @Override
             public void onClick(View view) {
                 String str1 = editText1.getText().toString();
-                String str2 = editText2.getText().toString();
+//                String str2 = editText2.getText().toString();
                 String str3 = editText3.getText().toString();
                 int value1,value2,value3;
 
@@ -249,19 +249,19 @@ public class Fm_PhieuMuon extends Fragment {
                     }
                 }
 
-                if(str2.isEmpty()){
-                    editText2.setError("chua dien");
-                    return;
-                }else{
-                    value2 = Integer.valueOf(str2);
-                    if(SetMatt.contains(value2)){
-
-                        check =true;
-                    }else{
-                        err = "thu thu";
-                        check=false;
-                    }
-                }
+//                if(str2.isEmpty()){
+//                    editText2.setError("chua dien");
+//                    return;
+//                }else{
+//                    value2 = Integer.valueOf(str2);
+//                    if(SetMatt.contains(value2)){
+//
+//                        check =true;
+//                    }else{
+//                        err = "thu thu";
+//                        check=false;
+//                    }
+//                }
 
 //                if(str3.isEmpty()){
 //                    editText3.setError("chua dien");
@@ -290,9 +290,10 @@ public class Fm_PhieuMuon extends Fragment {
                             System.out.println("Int Date : " + new Date(((long)id)*1000L));
                             Sach sach = snapshot.getValue(Sach.class);
                             if(!alreadyExecuted[0]) {
-                                Sachs sachs = new Sachs(id+sach.getQuantity(),currentDate, "","", new Sach(sach.getTenSach(), sach.getTheLoai(), sach.getID(), 1, sach.getPrice()),
+                                Sachs sachs = new Sachs(id,currentDate, "","", new Sach(sach.getTenSach(), sach.getTheLoai(), sach.getID(), 1, sach.getPrice()),
                                         new ThanhVien(str3),
-                                        new PhieuMuon(str2,user.getEmail()));
+                                        new PhieuMuon("",user.getEmail())
+                                );
                                 String pathObject = String.valueOf(sachs.getId());
                                 myRef2.child(pathObject).setValue(sachs, new DatabaseReference.CompletionListener() {
                                     @Override
@@ -327,7 +328,7 @@ public class Fm_PhieuMuon extends Fragment {
             @Override
             public void onClick(View view) {
                 editText1.setText("");
-                editText2.setText("");
+//                editText2.setText("");
                 editText3.setText("");
 
                 alertDialog.dismiss();
@@ -338,7 +339,7 @@ public class Fm_PhieuMuon extends Fragment {
     private void onClickDeleteData(Sachs book) {
         new AlertDialog.Builder(getActivity())
                 .setTitle(getString(R.string.app_name))
-                .setMessage("chac chan xoa phieu muon  nay")
+                .setMessage("Tam thoi chua co chuc nang nay")
                 .setPositiveButton("ok", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
@@ -351,7 +352,6 @@ public class Fm_PhieuMuon extends Fragment {
 //                                Toast.makeText(getActivity(), "delete success", Toast.LENGTH_SHORT).show();
 //                            }
 //                        });
-                        Toast.makeText(getActivity(),"tam thoi chua duoc xoa",Toast.LENGTH_SHORT).show();
 
                     }
                 })

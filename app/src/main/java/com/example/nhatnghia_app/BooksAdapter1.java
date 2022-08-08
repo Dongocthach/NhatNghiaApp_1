@@ -33,7 +33,7 @@ public class BooksAdapter1 extends RecyclerView.Adapter<BooksAdapter1.SachViewHo
                 } else {
                     List<Sachs> list = new ArrayList<>();
                     for (Sachs sach : mSachListOld) {
-                        if (sach.getPhieuMuon().getId().toLowerCase().contains(strSearch.toLowerCase())) {
+                        if (sach.getThanhVien().getHoten().toLowerCase().contains(strSearch.toLowerCase())) {
                             list.add(sach);
                         }
                     }
@@ -87,7 +87,7 @@ public class BooksAdapter1 extends RecyclerView.Adapter<BooksAdapter1.SachViewHo
             return;
         }
 
-        holder.tv1.setText(sach.getPhieuMuon().getId());
+//        holder.tv1.setText(sach.getPhieuMuon().getId());
         holder.tv2.setText(sach.getThanhVien().getHoten());
         holder.tv3.setText(sach.getSach().getTenSach());
         holder.tv4.setText(sach.getNgaymuon());
@@ -126,7 +126,7 @@ public class BooksAdapter1 extends RecyclerView.Adapter<BooksAdapter1.SachViewHo
 
         public SachViewHodlder(@NonNull View itemView) {
             super(itemView);
-            tv1 = itemView.findViewById(R.id.isachs_tv1);
+//            tv1 = itemView.findViewById(R.id.isachs_tv1);
             tv2 = itemView.findViewById(R.id.isachs_tv2);
             tv3 = itemView.findViewById(R.id.isachs_tv3);
             tv4 = itemView.findViewById(R.id.isachs_tv4);

@@ -1,4 +1,4 @@
-package com.example.nhatnghia_app;
+package com.example.nhatnghia_app.Adapter;
 
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -11,11 +11,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.nhatnghia_app.Models.Sach;
+import com.example.nhatnghia_app.R;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.storage.FileDownloadTask;
@@ -25,7 +26,6 @@ import com.google.firebase.storage.StorageReference;
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
-import java.util.Locale;
 
 public class BookAdapter1 extends RecyclerView.Adapter<BookAdapter1.SachViewHodlder> {
 
@@ -33,7 +33,7 @@ public class BookAdapter1 extends RecyclerView.Adapter<BookAdapter1.SachViewHodl
     Uri imageUri;
     StorageReference storageReference;
     ProgressDialog progressDialog;
-
+    private  IClickListener mIClickListerner;
     private Context mContext;
     private List<Sach> mSachList;
 
@@ -50,6 +50,19 @@ public class BookAdapter1 extends RecyclerView.Adapter<BookAdapter1.SachViewHodl
         this.mSachList = list;
         notifyDataSetChanged();
     }
+
+    public  interface  IClickListener{
+        void onClickReview(Sach book);
+
+
+    }
+
+    public BookAdapter1(IClickListener mIClickListerner, Context mContext, List<Sach> mSachList) {
+        this.mIClickListerner = mIClickListerner;
+        this.mContext = mContext;
+        this.mSachList = mSachList;
+    }
+
     @NonNull
     @Override
     public SachViewHodlder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -88,7 +101,13 @@ public class BookAdapter1 extends RecyclerView.Adapter<BookAdapter1.SachViewHodl
             e.printStackTrace();
         }
 
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mIClickListerner.onClickReview(sach);
 
+            }
+        });
         holder.tvTenSach.setText(sach.getTenSach());
         holder.tvTacGia.setText(sach.getTenTacGia());
         holder.tvTheLoai.setText(sach.getTheLoai());

@@ -1,5 +1,6 @@
 package com.example.nhatnghia_app.Fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -13,9 +14,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-import com.example.nhatnghia_app.BookAdapter1;
+import com.example.nhatnghia_app.Adapter.BookAdapter1;
+import com.example.nhatnghia_app.Models.PDFModel;
+import com.example.nhatnghia_app.PDFActivity;
 import com.example.nhatnghia_app.R;
-import com.example.nhatnghia_app.Sach;
+import com.example.nhatnghia_app.Models.Sach;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -30,7 +33,7 @@ public class Fm_TrangChinh extends Fragment {
 
     private RecyclerView recyclerView;
     private BookAdapter1 mbookAdapter;
-    private List<Sach> mlist;
+    public List<Sach> mlist;
 
 
     @Override
@@ -51,10 +54,21 @@ public class Fm_TrangChinh extends Fragment {
         DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(getActivity(), DividerItemDecoration.VERTICAL);
         recyclerView.addItemDecoration(dividerItemDecoration);
         mlist = new ArrayList<>();
-//        mlist.add(new Sach("1","narutotap5","naruto","mashamoto","anime"));
-//        mlist.add(new Sach("2","narutotap5","naruto","mashamoto","anime"));
+
+//        mlist.add(new Sach("1","narutotap5","naruto","mashamoto","anime",
+//                    new PDFModel("PDF One","https://www.cs.cmu.edu/afs/cs.cmu.edu/user/gchen/www/download/java/LearnJava.pdf")));
+//        mlist.add(new Sach("1","narutotap5","naruto","mashamoto","anime",
+//                new PDFModel("PDF One","https://www.cs.cmu.edu/afs/cs.cmu.edu/user/gchen/www/download/java/LearnJava.pdf")));//
         getListBookFromRealtimeDatabase();
-        mbookAdapter = new BookAdapter1(getActivity(),mlist);
+        mbookAdapter = new BookAdapter1(new BookAdapter1.IClickListener() {
+            @Override
+            public void onClickReview(Sach book) {
+                Intent intent = new Intent(getActivity(), PDFActivity.class);
+                intent.putExtra("url",book.getPdfModel().getPdfUrl());
+//                intent.putExtra("position",position);
+                startActivity(intent);
+            }
+        }, getActivity(), mlist);
         recyclerView.setAdapter(mbookAdapter);
 
         return v;

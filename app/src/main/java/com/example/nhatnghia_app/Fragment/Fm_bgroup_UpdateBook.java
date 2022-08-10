@@ -10,17 +10,12 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.widget.SearchView;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.appcompat.widget.SearchView;
 
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -29,15 +24,14 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.nhatnghia_app.BookAdapter2;
-import com.example.nhatnghia_app.PhieuMuon;
+import com.example.nhatnghia_app.Adapter.BookAdapter2;
+import com.example.nhatnghia_app.Models.PhieuMuon;
 import com.example.nhatnghia_app.R;
-import com.example.nhatnghia_app.Sach;
-import com.example.nhatnghia_app.Sachs;
-import com.example.nhatnghia_app.ThanhVien;
+import com.example.nhatnghia_app.Models.Sach;
+import com.example.nhatnghia_app.Models.Sachs;
+import com.example.nhatnghia_app.Models.ThanhVien;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.material.tabs.TabLayout;
 
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;

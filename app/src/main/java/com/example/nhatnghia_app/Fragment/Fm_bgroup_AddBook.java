@@ -14,18 +14,17 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.SimpleAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.example.nhatnghia_app.Models.PDFModel;
 import com.example.nhatnghia_app.R;
-import com.example.nhatnghia_app.Sach;
+import com.example.nhatnghia_app.Models.Sach;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Fm_bgroup_AddBook extends Fragment implements AdapterView.OnItemSelectedListener {
     private Button btn1,btn2,btn3;
@@ -80,7 +79,8 @@ public class Fm_bgroup_AddBook extends Fragment implements AdapterView.OnItemSel
                 String tentacgia = ed3.getText().toString().trim();
                 String theloai = ed4.getText().toString().trim();
                 String link = ed5.getText().toString().trim();
-                Sach sach = new Sach(id,link,tensach,tentacgia,theloai);
+                Sach sach = new Sach(id,link,tensach,tentacgia,theloai,
+                        new PDFModel("PDF One","https://www.cs.cmu.edu/afs/cs.cmu.edu/user/gchen/www/download/java/LearnJava.pdf"));
                 onClickAddUser(sach);
             }
         });

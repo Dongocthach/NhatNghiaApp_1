@@ -1,4 +1,4 @@
-package com.example.nhatnghia_app;
+package com.example.nhatnghia_app.Models;
 
 import java.util.HashMap;
 import java.util.Map;

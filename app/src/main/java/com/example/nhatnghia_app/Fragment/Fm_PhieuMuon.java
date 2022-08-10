@@ -16,8 +16,6 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.text.format.DateFormat;
-import android.text.format.Time;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -28,13 +26,12 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.nhatnghia_app.BookAdapter2;
-import com.example.nhatnghia_app.BooksAdapter1;
-import com.example.nhatnghia_app.PhieuMuon;
+import com.example.nhatnghia_app.Adapter.BooksAdapter1;
+import com.example.nhatnghia_app.Models.PhieuMuon;
 import com.example.nhatnghia_app.R;
-import com.example.nhatnghia_app.Sach;
-import com.example.nhatnghia_app.Sachs;
-import com.example.nhatnghia_app.ThanhVien;
+import com.example.nhatnghia_app.Models.Sach;
+import com.example.nhatnghia_app.Models.Sachs;
+import com.example.nhatnghia_app.Models.ThanhVien;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;

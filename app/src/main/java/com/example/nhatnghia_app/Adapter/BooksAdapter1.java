@@ -1,4 +1,4 @@
-package com.example.nhatnghia_app;
+package com.example.nhatnghia_app.Adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -11,6 +11,9 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.nhatnghia_app.Models.Sachs;
+import com.example.nhatnghia_app.R;
 
 import java.util.ArrayList;
 import java.util.List;

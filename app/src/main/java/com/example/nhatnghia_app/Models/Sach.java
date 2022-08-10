@@ -1,4 +1,4 @@
-package com.example.nhatnghia_app;
+package com.example.nhatnghia_app.Models;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -11,6 +11,7 @@ public class Sach {
     private String imgsach;
     private int quantity;
     private int price;
+    private PDFModel pdfModel;
     public Sach() {
     }
 
@@ -20,6 +21,16 @@ public class Sach {
         this.TenSach = tenSach;
         this.tenTacGia = tenTacGia;
         this.TheLoai = TheLoai;
+
+
+    }
+    public Sach(String ID, String imgsach, String tenSach, String tenTacGia, String TheLoai, PDFModel pdfModel) {
+        this.ID = ID;
+        this.imgsach = imgsach;
+        this.TenSach = tenSach;
+        this.tenTacGia = tenTacGia;
+        this.TheLoai = TheLoai;
+        this.pdfModel = pdfModel;
 
     }
 
@@ -45,6 +56,14 @@ public class Sach {
         this.imgsach = imgsach;
         this.quantity = quantity;
         this.price = price;
+    }
+
+    public PDFModel getPdfModel() {
+        return pdfModel;
+    }
+
+    public void setPdfModel(PDFModel pdfModel) {
+        this.pdfModel = pdfModel;
     }
 
     public String getTenSach() {

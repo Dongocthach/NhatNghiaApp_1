@@ -3,7 +3,6 @@ package com.example.nhatnghia_app.Fragment;
 import android.app.SearchManager;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.graphics.Bitmap;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -23,11 +22,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.nhatnghia_app.BookAdapter2;
 import com.example.nhatnghia_app.R;
-import com.example.nhatnghia_app.Sach;
-import com.example.nhatnghia_app.ThanhVien;
-import com.example.nhatnghia_app.ThanhVienAdapter;
+import com.example.nhatnghia_app.Models.ThanhVien;
+import com.example.nhatnghia_app.Adapter.ThanhVienAdapter;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;

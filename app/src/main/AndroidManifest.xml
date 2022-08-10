@@ -2,9 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.nhatnghia_app">
-
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" ></uses-permission>
-
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -13,17 +12,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NhatNghia_App">
-
+        <activity
+            android:name=".PDFViwerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PDFActivity"
+            android:exported="false" />
         <activity
             android:name=".SignUpActivity"
             android:exported="false" />
         <activity
             android:name=".SignInActivity"
             android:exported="false" />
-
         <activity
             android:name=".MainActivity"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".SplashActivity"
             android:exported="true">

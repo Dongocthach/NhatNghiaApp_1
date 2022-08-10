@@ -1,37 +1,22 @@
-package com.example.nhatnghia_app;
+package com.example.nhatnghia_app.Adapter;
 
-import android.app.ProgressDialog;
 import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.net.Uri;
-import android.util.Log;
-import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Filter;
 import android.widget.Filterable;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.storage.FileDownloadTask;
-import com.google.firebase.storage.FirebaseStorage;
-import com.google.firebase.storage.StorageReference;
-
-import java.io.File;
-import java.io.IOException;
-import com.google.firebase.storage.StorageReference;
+import com.example.nhatnghia_app.Models.Sach;
+import com.example.nhatnghia_app.R;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 
 public class BookAdapter2 extends RecyclerView.Adapter<BookAdapter2.SachViewHodlder> implements Filterable {
 

@@ -1,4 +1,4 @@
-package com.example.nhatnghia_app;
+package com.example.nhatnghia_app.Models;
 
 public class PhieuMuon {
     private String id;

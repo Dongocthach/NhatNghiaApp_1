@@ -30,8 +30,6 @@ public class SignUpActivity extends AppCompatActivity {
         initUI();
         initListerner();
 
-
-
     }
 
     private void initUI(){

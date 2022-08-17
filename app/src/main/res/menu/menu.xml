@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/thongtinhsach"
+        android:title="Thông tin sách"
+        app:showAsAction="never"
+        >
+        <menu>
+            <item
+                android:id="@+id/mn1"
+                android:title="Trang Chính"
+                android:icon="@drawable/trangchinh"
+                />
+
+            <item
+                android:id="@+id/mn2"
+                android:title="Phiếu mượn"
+                android:icon="@drawable/pm"
+                />
+            <item
+                android:id="@+id/mn3"
+                android:title="Quản lý Sach"
+                android:icon="@drawable/quanlysach"
+                />
+            <item
+                android:id="@+id/mn4"
+                android:title="Quản lý thành viên"
+                android:icon="@drawable/thanhvien"
+                />
+        </menu>
+    </item>
+<!--    -->
+    <item
+        android:id="@+id/taikhoan"
+        android:title="Tài khoản"
+        app:showAsAction="never">
+        <menu>
+            <item android:id="@+id/mn5"
+                android:title="Cập nhật tài khoản"
+                android:icon="@drawable/update"/>
+            <item android:id="@+id/mn6"
+                android:title="Đổi mật khẩu"
+                android:icon="@drawable/doimk"/>
+            <item android:id="@+id/mn7"
+                android:title="Dang Xuat"
+                android:icon="@drawable/dangxuat"/>
+        </menu>
+    </item>
+    <item
+        android:id="@+id/gioithieu"
+        android:title="Gioi Thieu"
+        app:showAsAction="never">
+        <menu>
+            <item android:id="@+id/mn8"
+                android:title="Giới Thiệu"
+                android:icon="@drawable/gioithieu"/>
+            <item android:id="@+id/mn9"
+                android:title="Địa chỉ"
+                android:icon="@drawable/bando"/>
+
+        </menu>
+    </item>
+
+</menu>

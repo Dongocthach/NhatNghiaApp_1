@@ -1,0 +1,442 @@
+[
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\drawable_button.xml.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\drawable\\button.xml"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\drawable_sky.jpg.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\drawable\\sky.jpg"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_pdfactivity.xml.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\layout\\activity_pdfactivity.xml"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_ic_baseline_cancel_24.xml.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\drawable-v24\\ic_baseline_cancel_24.xml"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\drawable_itemsach2.xml.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\drawable\\itemsach2.xml"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_calendar_month_24.xml.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\drawable\\ic_baseline_calendar_month_24.xml"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\layout_item_sach2.xml.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\layout\\item_sach2.xml"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\drawable_mau.xml.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\drawable\\mau.xml"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_map.xml.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\layout\\activity_map.xml"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\drawable_zalo.png.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\drawable\\zalo.png"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\drawable_gioithieu.webp.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\drawable\\gioithieu.webp"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\drawable_pm.png.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\drawable\\pm.png"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\drawable_addbook.xml.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\drawable\\addbook.xml"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\layout_item_sach1.xml.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\layout\\item_sach1.xml"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_fm__quan_ly_thanh_vien.xml.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\layout\\fragment_fm__quan_ly_thanh_vien.xml"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_ic_baseline_save_24.xml.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\drawable-v24\\ic_baseline_save_24.xml"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_logoa.png.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\drawable-v24\\logoa.png"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\anim_moving.xml.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\anim\\moving.xml"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\font_ol.TTF.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\font\\ol.TTF"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\anim_second.xml.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\anim\\second.xml"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\drawable_dangxuat.png.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\drawable\\dangxuat.png"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_arrow_left_24.xml.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\drawable\\ic_baseline_arrow_left_24.xml"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_delete_24.xml.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\drawable\\ic_baseline_delete_24.xml"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_edittextborder.xml.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\drawable-v24\\edittextborder.xml"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\anim_slideshow1.xml.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\anim\\slideshow1.xml"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\drawable_lich.png.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\drawable\\lich.png"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\drawable_mes.png.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\drawable\\mes.png"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\anim_zoom.xml.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\anim\\zoom.xml"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_fm__trang_chinh.xml.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\layout\\fragment_fm__trang_chinh.xml"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_ic_pass.xml.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\drawable-v24\\ic_pass.xml"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\drawable_share.jpg.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\drawable\\share.jpg"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_abc.jpg.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\drawable-v24\\abc.jpg"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\drawable_update.png.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\drawable\\update.png"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\drawable_delete.png.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\drawable\\delete.png"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\drawable_quanlysach.png.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\drawable\\quanlysach.png"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_vpn_key_24.xml.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\drawable\\ic_baseline_vpn_key_24.xml"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_csstomtron.xml.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\drawable-v24\\csstomtron.xml"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_fm__quan_ly_sach.xml.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\layout\\fragment_fm__quan_ly_sach.xml"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\anim_hour.xml.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\anim\\hour.xml"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_fm__cap_nhap_tai_khoan.xml.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\layout\\fragment_fm__cap_nhap_tai_khoan.xml"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_fm__image_control.xml.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\layout\\fragment_fm__image_control.xml"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_hinhchophotoshop.jpg.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\drawable-v24\\hinhchophotoshop.jpg"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_fm_bgroup__update_book.xml.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\layout\\fragment_fm_bgroup__update_book.xml"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_arrow_forward_24.xml.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\drawable\\ic_baseline_arrow_forward_24.xml"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\layout_la_dialog_add_pm.xml.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\layout\\la_dialog_add_pm.xml"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_fm__dia_chi.xml.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\layout\\fragment_fm__dia_chi.xml"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_cloud_upload_24.xml.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\drawable\\ic_baseline_cloud_upload_24.xml"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\font_df.TTF.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\font\\df.TTF"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_sach.gif.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\drawable-v24\\sach.gif"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\font_dungeon.TTF.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\font\\dungeon.TTF"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\drawable_dangky.gif.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\drawable\\dangky.gif"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\layout_toolbar.xml.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\layout\\toolbar.xml"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_sign_in.xml.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\layout\\activity_sign_in.xml"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_email_24.xml.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\drawable\\ic_baseline_email_24.xml"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\layout_la_dialog_update_thanhvien.xml.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\layout\\la_dialog_update_thanhvien.xml"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\drawable_doimk.jpg.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\drawable\\doimk.jpg"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_fm__doi_mat_khau.xml.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\layout\\fragment_fm__doi_mat_khau.xml"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\layout_la_dialog_update_pm.xml.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\layout\\la_dialog_update_pm.xml"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\layout_header_view_layout.xml.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\layout\\header_view_layout.xml"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_ic_add.xml.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\drawable-v24\\ic_add.xml"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\anim_slideshow.xml.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\anim\\slideshow.xml"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\font_br.TTF.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\font\\br.TTF"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\layout_item_sachs1.xml.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\layout\\item_sachs1.xml"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\layout_item_spinner.xml.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\layout\\item_spinner.xml"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_sign_up.xml.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\layout\\activity_sign_up.xml"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_arrow_right_24.xml.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\drawable\\ic_baseline_arrow_right_24.xml"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\anim_rotation.xml.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\anim\\rotation.xml"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_main.xml.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_fm_bgroupd__add_book.xml.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\layout\\fragment_fm_bgroupd__add_book.xml"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_splash.xml.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\layout\\activity_splash.xml"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_capnhat.png.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\drawable-v24\\capnhat.png"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_pay.png.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\drawable-v24\\pay.png"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_cona.jpg.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\drawable-v24\\cona.jpg"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\raw_ng.json.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\raw\\ng.json"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\layout_item_sathanhvien.xml.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\layout\\item_sathanhvien.xml"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\drawable_csstomtron1.xml.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\drawable\\csstomtron1.xml"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\raw_xuong.json.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\raw\\xuong.json"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_pdfviwer.xml.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\layout\\activity_pdfviwer.xml"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\drawable_youtube.jpg.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\drawable\\youtube.jpg"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\font_starstrp.ttf.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\font\\starstrp.ttf"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\drawable_thanhvien.png.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\drawable\\thanhvien.png"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_fm__phieu_muon.xml.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\layout\\fragment_fm__phieu_muon.xml"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\drawable_fb.png.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\drawable\\fb.png"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\raw_xemay.json.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\raw\\xemay.json"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\layout_book_update_dialog.xml.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\layout\\book_update_dialog.xml"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\drawable_trangchinh.png.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\drawable\\trangchinh.png"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_a.png.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\drawable-v24\\a.png"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\layout_la_dialog_add_thanhvien.xml.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\layout\\la_dialog_add_thanhvien.xml"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\drawable_calendar.png.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\drawable\\calendar.png"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\anim_minute.xml.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\anim\\minute.xml"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_fm__gioi_thieu.xml.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\layout\\fragment_fm__gioi_thieu.xml"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_ic_baseline_menu_open_24.xml.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\drawable-v24\\ic_baseline_menu_open_24.xml"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\drawable_bando.png.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\drawable\\bando.png"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_csstomtronlogin.xml.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\drawable-v24\\csstomtronlogin.xml"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\menu_menu.xml.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\menu\\menu.xml"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_adminicon.png.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\drawable-v24\\adminicon.png"
+    },
+    {
+        "merged": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_launcher_background.xml.flat",
+        "source": "E:\\github\\New folder (2)\\NhatNghiaApp_1-master\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+    }
+]

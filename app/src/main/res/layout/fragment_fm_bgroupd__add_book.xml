@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="6dp"
+    android:id="@+id/fragmentContainerView2"
+    android:background="#E4DCCF"
+    tools:context=".Fragment.Fm_bgroup_AddBook">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/book_ed1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="id" />
+        <EditText
+            android:layout_marginTop="10dp"
+            android:id="@+id/book_ed2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="TenSach" />
+        <EditText
+            android:layout_marginTop="10dp"
+            android:id="@+id/book_ed3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="TenTacGia" />
+        <EditText
+            android:layout_marginTop="10dp"
+            android:id="@+id/book_ed4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="TheLoai" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+            <EditText
+                android:id="@+id/book_ed5"
+                android:layout_width="0dp"
+                android:layout_weight="0.7"
+                android:layout_height="wrap_content"
+                android:hint="LinkImage"/>
+            <Button
+                android:background="@drawable/addbook"
+                app:backgroundTint="@null"
+                android:id="@+id/btn_fetchImage"
+                android:layout_width="0dp"
+                android:layout_weight="0.3"
+                android:layout_height="wrap_content"
+                android:text="Fetch"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="0dp"
+                android:layout_weight="0.7"
+                android:layout_height="70dp"
+                android:src="@drawable/adminicon"
+                />
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="0dp"
+                android:layout_weight="0.3"
+                android:layout_height="wrap_content"
+                android:text="Recently Added"/>
+        </LinearLayout>
+        <Button
+
+            android:background="@drawable/addbook"
+            app:backgroundTint="@null"
+            android:layout_marginTop="10dp"
+            android:id="@+id/btn_pushdata"
+            android:text="push data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </Button>
+
+        <Button
+            android:background="@drawable/addbook"
+            app:backgroundTint="@null"
+            android:layout_marginTop="10dp"
+            android:id="@+id/btn_clear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Clear"></Button>
+
+       
+    </LinearLayout>
+
+</FrameLayout>

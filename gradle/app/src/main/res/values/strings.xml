@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">NhatNghia_App</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="inavlid_email">Enter Valid Email</string>
+    <string name="inavlid_passwrod">Enter six digit password</string>
+
+</resources>

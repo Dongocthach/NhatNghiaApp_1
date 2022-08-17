@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="6dp"
+    android:layout_margin="16dp"
+    tools:context="Fragment.Fm_PhieuMuon">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/dialog_thanhvien_edit_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:text="Them Thanh Vien Moi"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="23sp"/>
+
+        <EditText
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:id="@+id/dialog_thanhvien_ed1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:background="@drawable/edittextborder"
+            android:hint="ID"
+            />
+
+        <EditText
+            android:id="@+id/dialog_thanhvien_ed2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:background="@drawable/edittextborder"
+            android:hint="HO VA TEN"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/dialog_thanhvien_ed3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:background="@drawable/edittextborder"
+            android:hint="Ngay Sinh"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+        <EditText
+            android:id="@+id/dialog_thanhvien_ed4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:background="@drawable/edittextborder"
+            android:hint="SDT THANH VIEN"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:padding="20dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            >
+
+            <Button
+                android:id="@+id/dialog_thanhvien_btn1"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:layout_gravity="center"
+                android:background="@drawable/button"
+
+                app:backgroundTint="@null"
+                android:text="SAVE"/>
+
+            <Button
+                android:id="@+id/dialog_thanhvien_btn2"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:layout_gravity="center"
+                android:background="@drawable/button"
+                app:backgroundTint="@null"
+                android:text="Cancel"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
